@@ -1,9 +1,9 @@
 "use client"
 
 import type React from "react"
-import { useState, useMemo, useRef, useEffect } from "react"
+import { useState, useMemo } from "react"
 import useSWR from "swr"
-import { Search, X, Plus, ArrowUp, ArrowDown, ArrowUpDown } from "lucide-react"
+import { Search, X, Plus } from "lucide-react"
 import ResourceCard from "./resource-card"
 import type { Filters } from "@/lib/types"
 
@@ -30,37 +30,12 @@ interface ResultsSectionProps {
   sidebarFilters?: { modality: string[]; cost: string[]; accessibility: string[] }
 }
 
-type SortField = "grade" | "year" | null
-type SortDirection = "asc" | "desc" | null
-
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function ResultsSection({ filters, sidebarFilters }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState("")
   const [isSearching, setIsSearching] = useState(false)
   const [showSubmitDialog, setShowSubmitDialog] = useState(false)
-
-  const [sortField, setSortField] = useState<SortField>(null)
-  const [sortDirection, setSortDirection] = useState<SortDirection>(null)
-  const [showSortPanel, setShowSortPanel] = useState(false)
-  const sortPanelRef = useRef<HTMLDivElement>(null)
-  const sortButtonRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        showSortPanel &&
-        sortPanelRef.current &&
-        sortButtonRef.current &&
-        !sortPanelRef.current.contains(event.target as Node) &&
-        !sortButtonRef.current.contains(event.target as Node)
-      ) {
-        setShowSortPanel(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [showSortPanel])
 
   const { data, error, isLoading } = useSWR<Resource[]>("/resources.json", fetcher, {
     refreshInterval: 3600000,
@@ -196,73 +171,15 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
   const sortedResources = useMemo(() => {
     const resources = [...keywordFilteredResources]
 
-    // If no custom sort is active, use default sorting (curriculum expectation, then title)
-    if (!sortField || !sortDirection) {
-      return resources.sort((a, b) => {
-        const codeA = a.curriculum_expectations?.[0] || "ZZZ"
-        const codeB = b.curriculum_expectations?.[0] || "ZZZ"
-        const codeCompare = codeA.localeCompare(codeB, undefined, { numeric: true })
-        if (codeCompare !== 0) return codeCompare
-        return (a.topic_title || "").localeCompare(b.topic_title || "")
-      })
-    }
-
-    // Custom sort
+    // Default sorting by curriculum expectation, then title
     return resources.sort((a, b) => {
-      let valueA: number
-      let valueB: number
-
-      switch (sortField) {
-        case "grade":
-          // Get the first (lowest) grade from comma-separated grades
-          const gradesA = String(a.grade_level || "0")
-            .split(",")
-            .map((g) => Number.parseInt(g.trim()) || 0)
-          const gradesB = String(b.grade_level || "0")
-            .split(",")
-            .map((g) => Number.parseInt(g.trim()) || 0)
-          valueA = Math.min(...gradesA)
-          valueB = Math.min(...gradesB)
-          break
-        case "year":
-          valueA = a.year_published || 0
-          valueB = b.year_published || 0
-          break
-        default:
-          return 0
-      }
-
-      if (sortDirection === "asc") {
-        return valueA - valueB
-      } else {
-        return valueB - valueA
-      }
+      const codeA = a.curriculum_expectations?.[0] || "ZZZ"
+      const codeB = b.curriculum_expectations?.[0] || "ZZZ"
+      const codeCompare = codeA.localeCompare(codeB, undefined, { numeric: true })
+      if (codeCompare !== 0) return codeCompare
+      return (a.topic_title || "").localeCompare(b.topic_title || "")
     })
-  }, [keywordFilteredResources, sortField, sortDirection])
-
-  const handleSort = (field: SortField, direction: SortDirection) => {
-    if (sortField === field && sortDirection === direction) {
-      // Clicking same sort again clears it
-      setSortField(null)
-      setSortDirection(null)
-    } else {
-      setSortField(field)
-      setSortDirection(direction)
-    }
-    setShowSortPanel(false)
-  }
-
-  const getSortButtonLabel = () => {
-    if (!sortField || !sortDirection) {
-      return "Sort by..."
-    }
-    const labels: Record<string, string> = {
-      grade: "Grade",
-      year: "Year",
-    }
-    const arrow = sortDirection === "desc" ? "↓" : "↑"
-    return `${labels[sortField]} ${arrow}`
-  }
+  }, [keywordFilteredResources])
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value
@@ -338,93 +255,6 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
           </div>
 
           <div className="flex items-center gap-3 ml-auto">
-            {/* Sort Button */}
-            <div className="relative">
-              <button
-                ref={sortButtonRef}
-                onClick={() => setShowSortPanel(!showSortPanel)}
-                className={`px-3 py-1.5 rounded-xl border-2 text-sm font-semibold transition-all duration-200 flex items-center gap-2 ${
-                  sortField && sortDirection
-                    ? "bg-[#8B4513] text-white border-[#8B4513]"
-                    : "bg-white text-[#8B4513] border-[#8B4513] hover:bg-[#FFF5EB]"
-                }`}
-              >
-                {!sortField && <ArrowUpDown size={14} />}
-                {getSortButtonLabel()}
-              </button>
-
-              {/* Sort Panel Dropdown */}
-              {showSortPanel && (
-                <div
-                  ref={sortPanelRef}
-                  className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-lg border-2 border-[#E8D5C4] p-4 pt-8 z-50 min-w-[180px]"
-                >
-                  <button
-                    onClick={() => setShowSortPanel(false)}
-                    className="absolute top-3 right-3 p-0.5 hover:bg-stone-100 rounded-full transition-colors"
-                  >
-                    <X size={14} className="text-stone-500" />
-                  </button>
-
-                  <div className="space-y-2">
-                    {/* Grade Sort */}
-                    <div className="flex items-center justify-between gap-2">
-                      <button
-                        onClick={() => handleSort("grade", "desc")}
-                        className={`p-1.5 rounded-lg transition-colors ${
-                          sortField === "grade" && sortDirection === "desc"
-                            ? "bg-[#FF6B35] text-white"
-                            : "hover:bg-stone-100 text-stone-600"
-                        }`}
-                        title="Grade (High to Low)"
-                      >
-                        <ArrowDown size={14} />
-                      </button>
-                      <span className="text-sm font-medium text-[#2C2C2C] flex-1 text-center">Grade</span>
-                      <button
-                        onClick={() => handleSort("grade", "asc")}
-                        className={`p-1.5 rounded-lg transition-colors ${
-                          sortField === "grade" && sortDirection === "asc"
-                            ? "bg-[#FF6B35] text-white"
-                            : "hover:bg-stone-100 text-stone-600"
-                        }`}
-                        title="Grade (Low to High)"
-                      >
-                        <ArrowUp size={14} />
-                      </button>
-                    </div>
-
-                    {/* Year Sort */}
-                    <div className="flex items-center justify-between gap-2">
-                      <button
-                        onClick={() => handleSort("year", "desc")}
-                        className={`p-1.5 rounded-lg transition-colors ${
-                          sortField === "year" && sortDirection === "desc"
-                            ? "bg-[#FF6B35] text-white"
-                            : "hover:bg-stone-100 text-stone-600"
-                        }`}
-                        title="Year (Newest First)"
-                      >
-                        <ArrowDown size={14} />
-                      </button>
-                      <span className="text-sm font-medium text-[#2C2C2C] flex-1 text-center">Year</span>
-                      <button
-                        onClick={() => handleSort("year", "asc")}
-                        className={`p-1.5 rounded-lg transition-colors ${
-                          sortField === "year" && sortDirection === "asc"
-                            ? "bg-[#FF6B35] text-white"
-                            : "hover:bg-stone-100 text-stone-600"
-                        }`}
-                        title="Year (Oldest First)"
-                      >
-                        <ArrowUp size={14} />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* Showing X resources pill */}
             <div className="text-sm font-semibold text-[#8B4513] px-3 py-1.5 bg-white rounded-xl border-2 border-[#8B4513] shadow-sm flex-shrink-0">
               Showing {sortedResources.length} resource{sortedResources.length !== 1 ? "s" : ""}
