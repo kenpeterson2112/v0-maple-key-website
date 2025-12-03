@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import BookmarksModal from "@/components/bookmarks-modal"
 import SettingsModal from "@/components/settings-modal"
+import { useBookmarks } from "@/lib/bookmarks-context"
 
 const EDTECH_SUBSCRIPTIONS = [
   { id: "edwin", name: "Edwin" },
@@ -54,6 +55,8 @@ const SUBJECT_STRANDS: Record<string, string[]> = {
 }
 
 export default function SearchHeader({ filters, setFilters }: SearchHeaderProps) {
+  const { bookmarkedResources } = useBookmarks()
+
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [language, setLanguage] = useState<"EN" | "FR">("EN")
   const [selectedGrades, setSelectedGrades] = useState<string[]>([])
@@ -466,11 +469,11 @@ export default function SearchHeader({ filters, setFilters }: SearchHeaderProps)
               >
                 <Bookmark
                   size={20}
-                  className={`flex-shrink-0 ${selectedSubscriptions.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}`}
+                  className={`flex-shrink-0 ${bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}`}
                 />
-                {selectedSubscriptions.length > 0 && (
+                {bookmarkedResources.length > 0 && (
                   <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B35] text-white text-xs font-bold rounded-full flex items-center justify-center">
-                    {selectedSubscriptions.length >= 10 ? "9+" : selectedSubscriptions.length}
+                    {bookmarkedResources.length >= 10 ? "9+" : bookmarkedResources.length}
                   </span>
                 )}
               </button>
