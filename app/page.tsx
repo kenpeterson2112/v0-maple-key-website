@@ -4,6 +4,7 @@ import { useState } from "react"
 import SearchHeader from "@/components/search-header"
 import SidebarFilters from "@/components/sidebar-filters"
 import ResultsSection from "@/components/results-section"
+import LoginModal from "@/components/login-modal"
 import type { Filters } from "@/lib/types"
 
 export default function Home() {
@@ -27,8 +28,17 @@ export default function Home() {
     }))
   }
 
+  const handleLogin = (province: string, grades: string[]) => {
+    setFilters((prev) => ({
+      ...prev,
+      province: province,
+      grade: grades.join(","),
+    }))
+  }
+
   return (
     <div className="h-screen bg-[#FAF3E0] overflow-hidden">
+      <LoginModal onLogin={handleLogin} />
       <SearchHeader filters={filters} setFilters={setFilters} />
       <div className="flex h-[calc(100vh-80px)]">
         <SidebarFilters onFilterChange={handleSidebarFilterChange} />
