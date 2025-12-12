@@ -42,6 +42,7 @@ const SCHOOL_DISTRICTS = [
   { code: "YRDSB", name: "York Region DSB" },
   { code: "DDSB", name: "Durham DSB" },
   { code: "PDSB", name: "Peel DSB" },
+  { code: "TVDSB", name: "TVDSB" }, // Added TVDSB to the list of school districts
 ]
 
 const AVAILABLE_GRADES = ["6", "7", "8", "9"]

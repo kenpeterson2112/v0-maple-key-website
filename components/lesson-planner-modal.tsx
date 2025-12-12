@@ -367,6 +367,41 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
     </div>
   </div>
   
+  <!-- MATERIALS & PREPARATION SECTION -->
+  <div class="section">
+    <div class="section-header materials">
+      <span class="section-title">Materials & Preparation</span>
+    </div>
+    <div class="section-content">
+      <div class="flex gap-4">
+        {/* Left box - Resources (1/4 width) */}
+        <div class="w-1/4 bg-stone-50 border border-stone-200 rounded-lg p-3">
+          <p class="text-xs font-semibold text-stone-700 mb-2">Resources</p>
+          <ul class="text-xs text-[#444] space-y-1.5">
+            ${resourcesList.length > 0 ? resourcesList : "<li>No resources selected</li>"}
+          </ul>
+        </div>
+
+        {/* Right box - Preparation steps (3/4 width) */}
+        <div class="flex-1 bg-stone-50 border border-stone-200 rounded-lg p-3">
+          <p class="text-xs font-semibold text-stone-700 mb-2">Preparation</p>
+          <ul class="text-sm text-[#444] space-y-2">
+            ${
+              materialsContent
+                .split("\n")
+                .filter(Boolean)
+                .map(
+                  (item, index) =>
+                    `<li key=${index} className="flex items-start gap-2"><span className="text-stone-400 flex-shrink-0">${index + 1}.</span><span>${item}</span></li>`,
+                )
+                .join("") || "<li>No preparation steps listed</li>"
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- Minds On Section -->
   <div class="section">
     <div class="section-header minds-on">
@@ -413,14 +448,6 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
       <div class="assessment-title">Assessment Note</div>
       <div class="assessment-content">${consolidationAssessment}</div>
     </div>
-  </div>
-  
-  <!-- Materials Section -->
-  <div class="section">
-    <div class="section-header materials">
-      <span class="section-title">Materials & Preparation</span>
-    </div>
-    <div class="section-content">${materialsContent}</div>
   </div>
   
   <div class="footer">
@@ -524,6 +551,86 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
                         Regenerate
                       </button>
                     </div>
+                  </div>
+                </div>
+
+                {/* MATERIALS & PREPARATION SECTION - Moved above Minds On */}
+                <div className="bg-white rounded-xl border-l-4 border-stone-400 shadow-sm overflow-hidden">
+                  <div className="p-5">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <ClipboardList size={20} className="text-stone-600" />
+                        <h4 className="text-lg font-semibold text-[#2C2C2C]">Materials & Preparation</h4>
+                      </div>
+                      <button
+                        onClick={() => setEditingSection(editingSection === "materials" ? null : "materials")}
+                        className="p-1.5 hover:bg-stone-100 rounded-lg transition-colors"
+                        aria-label="Edit Materials section"
+                      >
+                        <Pencil size={16} className="text-stone-600" />
+                      </button>
+                    </div>
+
+                    {editingSection === "materials" ? (
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-xs font-medium text-stone-600 mb-2">
+                            Resources (auto-generated from bookmarks)
+                          </p>
+                          <p className="text-sm text-[#444] bg-stone-50 p-2 rounded-lg">
+                            {bookmarkedResources.map((r) => r.topic_title).join(", ")}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-medium text-stone-600 mb-2">
+                            Preparation & Materials (one per line)
+                          </p>
+                          <textarea
+                            value={materialsContent}
+                            onChange={(e) => setMaterialsContent(e.target.value)}
+                            rows={6}
+                            className="w-full px-3 py-2 border-2 border-stone-300 rounded-lg bg-white text-sm focus:outline-none focus:border-stone-500 transition-colors resize-none"
+                          />
+                        </div>
+                        <button
+                          onClick={() => setEditingSection(null)}
+                          className="px-3 py-1.5 bg-stone-500 hover:bg-stone-600 text-white text-xs font-medium rounded-lg transition-colors"
+                        >
+                          Done Editing
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex gap-4">
+                        {/* Left box - Resources (1/4 width) */}
+                        <div className="w-1/4 bg-stone-50 border border-stone-200 rounded-lg p-3">
+                          <p className="text-xs font-semibold text-stone-700 mb-2">Resources</p>
+                          <ul className="text-xs text-[#444] space-y-1.5">
+                            {bookmarkedResources.map((resource, index) => (
+                              <li key={index} className="flex items-start gap-1.5">
+                                <span className="text-stone-400 flex-shrink-0">•</span>
+                                <span>{resource.topic_title}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Right box - Preparation steps (3/4 width) */}
+                        <div className="flex-1 bg-stone-50 border border-stone-200 rounded-lg p-3">
+                          <p className="text-xs font-semibold text-stone-700 mb-2">Preparation</p>
+                          <ul className="text-sm text-[#444] space-y-2">
+                            {materialsContent
+                              .split("\n")
+                              .filter(Boolean)
+                              .map((item, index) => (
+                                <li key={index} className="flex items-start gap-2">
+                                  <span className="text-stone-400 flex-shrink-0">{index + 1}.</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -736,75 +843,6 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
                   </div>
                 </div>
 
-                {/* SECTION D - MATERIALS & PREPARATION */}
-                <div className="bg-white rounded-xl border-l-4 border-stone-400 shadow-sm overflow-hidden">
-                  <div className="p-5">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <ClipboardList size={20} className="text-stone-600" />
-                        <h4 className="text-lg font-semibold text-[#2C2C2C]">Materials & Preparation</h4>
-                      </div>
-                      <button
-                        onClick={() => setEditingSection(editingSection === "materials" ? null : "materials")}
-                        className="p-1.5 hover:bg-stone-100 rounded-lg transition-colors"
-                        aria-label="Edit Materials section"
-                      >
-                        <Pencil size={16} className="text-stone-600" />
-                      </button>
-                    </div>
-
-                    {editingSection === "materials" ? (
-                      <div className="space-y-3">
-                        <div>
-                          <p className="text-xs font-medium text-stone-600 mb-2">
-                            Resources (auto-generated from bookmarks)
-                          </p>
-                          <p className="text-sm text-[#444] bg-stone-50 p-2 rounded-lg">
-                            {bookmarkedResources.map((r) => r.topic_title).join(", ")}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-xs font-medium text-stone-600 mb-2">
-                            Preparation & Materials (one per line)
-                          </p>
-                          <textarea
-                            value={materialsContent}
-                            onChange={(e) => setMaterialsContent(e.target.value)}
-                            rows={6}
-                            className="w-full px-3 py-2 border-2 border-stone-300 rounded-lg bg-white text-sm focus:outline-none focus:border-stone-500 transition-colors resize-none"
-                          />
-                        </div>
-                        <button
-                          onClick={() => setEditingSection(null)}
-                          className="px-3 py-1.5 bg-stone-500 hover:bg-stone-600 text-white text-xs font-medium rounded-lg transition-colors"
-                        >
-                          Done Editing
-                        </button>
-                      </div>
-                    ) : (
-                      <ul className="text-sm text-[#444] space-y-2">
-                        <li className="flex items-start gap-2">
-                          <span className="text-stone-400">•</span>
-                          <span>
-                            <strong>Resources:</strong> {bookmarkedResources.map((r) => r.topic_title).join(", ")}
-                          </span>
-                        </li>
-                        {materialsContent
-                          .split("\n")
-                          .filter(Boolean)
-                          .map((item, index) => (
-                            <li key={index} className="flex items-start gap-2">
-                              <span className="text-stone-400">•</span>
-                              <span>
-                                <strong>Prep:</strong> {item}
-                              </span>
-                            </li>
-                          ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
-
                 <div className="bg-white rounded-xl border-2 border-[#E8D5C4] p-6 text-center">
                   <MessageSquareText size={32} className="text-[#A8998E] mx-auto mb-3" />
                   <p className="text-[#666] mb-4">Did you like this lesson? Do you have feedback?</p>
@@ -910,7 +948,7 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
                     <h3 className="text-lg font-semibold text-[#2C2C2C]">Selected Resources</h3>
                   </div>
 
-                  {showWarning && (
+                  {false && showWarning && (
                     <div className="bg-amber-50 border border-amber-300 rounded-lg p-3 flex items-start gap-3 mb-4">
                       <AlertTriangle size={18} className="text-amber-600 flex-shrink-0 mt-0.5" />
                       <p className="text-sm text-amber-800">
