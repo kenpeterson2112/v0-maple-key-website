@@ -17,23 +17,26 @@ import Image from "next/image"
 
 interface SidebarFiltersProps {
   onFilterChange: (filterGroup: string, selectedItems: string[]) => void
+  sidebarFilters?: { [key: string]: string[] }
 }
 
-export default function SidebarFilters({ onFilterChange }: SidebarFiltersProps) {
+export default function SidebarFilters({ onFilterChange, sidebarFilters: externalFilters }: SidebarFiltersProps) {
   const [expandedGroups, setExpandedGroups] = useState<{ [key: string]: boolean }>({
     modality: true,
-    cost: true, // Added cost filter group
+    cost: true,
     accessibility: true,
   })
-  const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[] }>({
+  const [internalFilters, setInternalFilters] = useState<{ [key: string]: string[] }>({
     modality: [],
-    cost: [], // Added cost filter state
+    cost: [],
     accessibility: [],
   })
 
+  const selectedFilters = externalFilters || internalFilters
+
   const filterOptions = {
     modality: ["Books & Print Media", "Online", "Interactive", "Video", "Audio/Podcast", "Trip", "Guest Speaker"],
-    cost: ["Free Only", "Paid"], // Updated "Free" to "Free Only" for clarity
+    cost: ["Free Only", "Paid"],
     accessibility: ["No concerns", "Some Concerns (see details)", "Not Accessible"],
   }
 
@@ -45,31 +48,31 @@ export default function SidebarFilters({ onFilterChange }: SidebarFiltersProps) 
   }
 
   const toggleFilter = (group: string, option: string) => {
-    setSelectedFilters((prev) => {
-      const current = prev[group] || []
-      const updated = current.includes(option) ? current.filter((item) => item !== option) : [...current, option]
+    const current = selectedFilters[group] || []
+    const updated = current.includes(option) ? current.filter((item) => item !== option) : [...current, option]
 
-      setTimeout(() => onFilterChange(group, updated), 0)
-
-      return {
+    if (!externalFilters) {
+      setInternalFilters((prev) => ({
         ...prev,
         [group]: updated,
-      }
-    })
+      }))
+    }
+
+    setTimeout(() => onFilterChange(group, updated), 0)
   }
 
   const handleClearAll = () => {
-    const clearedFilters = {
-      modality: [],
-      cost: [], // Include cost in clear all
-      accessibility: [],
+    if (!externalFilters) {
+      setInternalFilters({
+        modality: [],
+        cost: [],
+        accessibility: [],
+      })
     }
-    setSelectedFilters(clearedFilters)
 
-    // Notify parent of changes
     setTimeout(() => {
       onFilterChange("modality", [])
-      onFilterChange("cost", []) // Clear cost filter
+      onFilterChange("cost", [])
       onFilterChange("accessibility", [])
     }, 0)
   }
@@ -81,19 +84,19 @@ export default function SidebarFilters({ onFilterChange }: SidebarFiltersProps) 
 
     switch (modality) {
       case "Books & Print Media":
-        return <BookOpen {...iconProps} style={{ color: "#D9742A" }} /> // Burnt Orange
+        return <BookOpen {...iconProps} style={{ color: "#D9742A" }} />
       case "Online":
-        return <Globe {...iconProps} style={{ color: "#4CAFB5" }} /> // Soft Teal
+        return <Globe {...iconProps} style={{ color: "#4CAFB5" }} />
       case "Interactive":
-        return <MousePointerClick {...iconProps} style={{ color: "#849657" }} /> // Olive Green
+        return <MousePointerClick {...iconProps} style={{ color: "#849657" }} />
       case "Video":
-        return <Video {...iconProps} style={{ color: "#FFC107" }} /> // Golden Yellow
+        return <Video {...iconProps} style={{ color: "#FFC107" }} />
       case "Audio/Podcast":
-        return <Headphones {...iconProps} style={{ color: "#D9742A" }} /> // Burnt Orange
+        return <Headphones {...iconProps} style={{ color: "#D9742A" }} />
       case "Trip":
-        return <MapPin {...iconProps} style={{ color: "#4CAFB5" }} /> // Soft Teal
+        return <MapPin {...iconProps} style={{ color: "#4CAFB5" }} />
       case "Guest Speaker":
-        return <Mic {...iconProps} style={{ color: "#849657" }} /> // Olive Green
+        return <Mic {...iconProps} style={{ color: "#849657" }} />
       default:
         return null
     }
@@ -103,10 +106,10 @@ export default function SidebarFilters({ onFilterChange }: SidebarFiltersProps) 
     const iconProps = { size: 14, className: "flex-shrink-0" }
 
     switch (cost) {
-      case "Free Only": // Updated case to match new "Free Only" label
-        return <CheckCircle2 {...iconProps} style={{ color: "#849657" }} /> // Olive Green for free
+      case "Free Only":
+        return <CheckCircle2 {...iconProps} style={{ color: "#849657" }} />
       case "Paid":
-        return <DollarSign {...iconProps} style={{ color: "#D9742A" }} /> // Burnt Orange for paid
+        return <DollarSign {...iconProps} style={{ color: "#D9742A" }} />
       default:
         return null
     }
@@ -148,7 +151,7 @@ export default function SidebarFilters({ onFilterChange }: SidebarFiltersProps) 
   }
 
   return (
-    <aside className="w-[20%] bg-[#FAF3E0] border-r border-[#E8D5C4] p-4 overflow-y-auto shadow-md">
+    <aside className="hidden md:block w-[20%] bg-[#FAF3E0] border-r border-[#E8D5C4] p-4 overflow-y-auto shadow-md">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <h2 className="text-base font-bold text-[#8B4513]">Filters</h2>

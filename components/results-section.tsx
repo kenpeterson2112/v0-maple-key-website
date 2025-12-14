@@ -198,7 +198,7 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
 
   if (error) {
     return (
-      <div className="w-[80%] px-8 py-6">
+      <div className="w-full px-8 py-6">
         <div className="text-center py-12 bg-white rounded-2xl shadow-md border border-[#E8D5C4]">
           <p className="text-red-600 text-lg font-semibold">Failed to load resources</p>
           <p className="text-[#A8998E] mt-2">Please refresh the page to try again.</p>
@@ -209,7 +209,7 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
 
   if (isLoading) {
     return (
-      <div className="w-[80%] px-8 py-6">
+      <div className="w-full px-8 py-6">
         <div className="text-center py-12 bg-white rounded-2xl shadow-md border border-[#E8D5C4]">
           <p className="text-[#8B4513] text-lg font-semibold">Loading resources...</p>
         </div>
@@ -218,13 +218,13 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
   }
 
   return (
-    <div className="w-[80%] h-full flex flex-col">
+    <div className="w-full h-full flex flex-col">
       {/* Results counter and search bar - FIXED position, doesn't scroll */}
-      <div className="flex-shrink-0 relative bg-[#FAF3E0] mx-6 leading-7 py-3">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-80 relative">
-              <div className="relative flex items-center bg-white border-2 border-[#E8D5C4] rounded-2xl shadow-md px-3 py-1.5 focus-within:border-[#FF6B35] transition-colors duration-200">
+      <div className="flex-shrink-0 relative bg-[#FAF3E0] mx-3 md:mx-6 leading-7 py-2 md:py-3">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full md:w-auto">
+            <div className="w-full sm:w-80 relative">
+              <div className="relative flex items-center bg-white border-2 border-[#E8D5C4] rounded-2xl shadow-md px-2.5 md:px-3 py-1.5 focus-within:border-[#FF6B35] transition-colors duration-200">
                 <Search size={16} className="text-[#A8998E] mr-2 flex-shrink-0" />
                 <input
                   type="text"
@@ -236,7 +236,7 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
                 {searchQuery.length > 0 && (
                   <button
                     onClick={handleClearSearch}
-                    className="absolute right-3 p-0.5 hover:bg-[#FFE5CC] rounded-full transition-colors duration-200"
+                    className="absolute right-2 md:right-3 p-0.5 hover:bg-[#FFE5CC] rounded-full transition-colors duration-200"
                     title="Clear search"
                   >
                     <X size={16} className="text-[#A8998E] hover:text-[#8B4513]" />
@@ -254,23 +254,23 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
             )}
           </div>
 
-          <div className="flex items-center gap-3 ml-auto">
+          <div className="flex items-center justify-center md:justify-end gap-3 md:ml-auto">
             {/* Showing X resources pill */}
-            <div className="text-sm font-semibold text-[#8B4513] px-3 py-1.5 bg-white rounded-xl border-2 border-[#8B4513] shadow-sm flex-shrink-0">
+            <div className="text-xs md:text-sm font-semibold text-[#8B4513] px-2.5 md:px-3 py-1.5 bg-white rounded-xl border-2 border-[#8B4513] shadow-sm flex-shrink-0">
               Showing {sortedResources.length} resource{sortedResources.length !== 1 ? "s" : ""}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-6 pb-4">
+      <div className="flex-1 overflow-y-auto px-3 md:px-6 pb-4">
         {sortedResources.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-2xl shadow-md border border-[#E8D5C4]">
             <p className="text-[#2C2C2C] text-lg font-semibold">No resources found matching your filters.</p>
             <p className="text-[#A8998E] mt-2">Try adjusting your filter selections.</p>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-3 md:gap-4">
             {sortedResources.map((resource, i) => (
               <ResourceCard key={i} resource={resource} />
             ))}
@@ -278,11 +278,13 @@ export default function ResultsSection({ filters, sidebarFilters }: ResultsSecti
         )}
 
         <div className="flex justify-center mt-8 mb-4">
-          <div className="bg-white rounded-2xl shadow-md border-2 border-[#E8D5C4] p-6 text-center max-w-md">
-            <p className="text-[#2C2C2C] font-medium mb-4">Couldn't find a resource? Know of a good one?</p>
+          <div className="bg-white rounded-2xl shadow-md border-2 border-[#E8D5C4] p-4 md:p-6 text-center max-w-md mx-3">
+            <p className="text-sm md:text-base text-[#2C2C2C] font-medium mb-3 md:mb-4">
+              Couldn't find a resource? Know of a good one?
+            </p>
             <button
               onClick={() => setShowSubmitDialog(true)}
-              className="bg-gradient-to-r from-[#FF6B35] to-[#F4845F] text-white px-6 py-2 rounded-xl font-medium hover:from-[#E85A24] hover:to-[#E37350] transition-all duration-200 flex items-center gap-2 mx-auto"
+              className="bg-gradient-to-r from-[#FF6B35] to-[#F4845F] text-white px-5 md:px-6 py-2 rounded-xl text-sm md:text-base font-medium hover:from-[#E85A24] hover:to-[#E37350] transition-all duration-200 flex items-center gap-2 mx-auto min-h-[44px]"
             >
               <Plus size={18} />
               Submit Resource

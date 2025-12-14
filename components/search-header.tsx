@@ -1,5 +1,5 @@
 "use client"
-import { Settings, Globe, ChevronDown, Bookmark, School } from "lucide-react"
+import { Settings, Globe, ChevronDown, Bookmark, School, Menu, SlidersHorizontal, X } from "lucide-react"
 import type { Filters } from "@/lib/types"
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
@@ -17,6 +17,8 @@ const EDTECH_SUBSCRIPTIONS = [
 interface SearchHeaderProps {
   filters: Filters
   setFilters: (filters: Filters) => void
+  onOpenMobileFilters?: () => void
+  totalActiveFilters?: number
 }
 
 const PROVINCES = [
@@ -55,7 +57,12 @@ const SUBJECT_STRANDS: Record<string, string[]> = {
   "Social Studies": ["Heritage and Identity", "People and Environments", "Power and Governance"],
 }
 
-export default function SearchHeader({ filters, setFilters }: SearchHeaderProps) {
+export default function SearchHeader({
+  filters,
+  setFilters,
+  onOpenMobileFilters,
+  totalActiveFilters = 0,
+}: SearchHeaderProps) {
   const { bookmarkedResources } = useBookmarks()
 
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -65,6 +72,7 @@ export default function SearchHeader({ filters, setFilters }: SearchHeaderProps)
   const [selectedSubscriptions, setSelectedSubscriptions] = useState<string[]>([])
   const [isBookmarksModalOpen, setIsBookmarksModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const gradeDropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -320,8 +328,8 @@ export default function SearchHeader({ filters, setFilters }: SearchHeaderProps)
   return (
     <>
       <header className="sticky top-0 z-50 bg-[#FAF3E0] shadow-lg border-[#E8D5C4]">
-        <div className="max-w-[1500px] mx-auto px-6 py-3">
-          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+        <div className="max-w-[1500px] mx-auto px-4 md:px-6 py-3">
+          <div className="hidden md:grid grid-cols-[auto_1fr_auto] items-center gap-4">
             <div className="flex items-center">
               <Image
                 src="/Maple_Key_Transp_Background.png"
@@ -488,6 +496,161 @@ export default function SearchHeader({ filters, setFilters }: SearchHeaderProps)
               </button>
             </div>
           </div>
+
+          <div className="flex md:hidden items-center justify-between">
+            <Image
+              src="/Maple_Key_Transp_Background.png"
+              alt="Maple Key Logo"
+              width={120}
+              height={40}
+              className="w-auto object-contain h-12"
+              priority
+            />
+
+            <div className="flex items-center gap-2">
+              {/* Filters button */}
+              <button
+                onClick={onOpenMobileFilters}
+                className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border-2 border-[#8B4513] hover:bg-[#FFE5CC] transition-all duration-200 shadow-sm"
+              >
+                <SlidersHorizontal size={18} className="text-[#8B4513]" />
+                <span className="text-sm font-semibold text-[#8B4513]">Filters</span>
+                {totalActiveFilters > 0 && (
+                  <span className="px-1.5 py-0.5 bg-[#FF6B35] text-white text-xs font-bold rounded-full min-w-[20px] text-center">
+                    {totalActiveFilters >= 10 ? "9+" : totalActiveFilters}
+                  </span>
+                )}
+              </button>
+
+              {/* Bookmarks button */}
+              <button
+                onClick={() => setIsBookmarksModalOpen(true)}
+                className="relative p-2 hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
+                title="Saved Resources"
+              >
+                <Bookmark
+                  size={20}
+                  className={`flex-shrink-0 ${bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}`}
+                />
+                {bookmarkedResources.length > 0 && (
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B35] text-white text-xs font-bold rounded-full flex items-center justify-center">
+                    {bookmarkedResources.length >= 10 ? "9+" : bookmarkedResources.length}
+                  </span>
+                )}
+              </button>
+
+              {/* Hamburger menu */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
+              >
+                {isMobileMenuOpen ? (
+                  <X size={20} className="text-[#8B4513]" />
+                ) : (
+                  <Menu size={20} className="text-[#8B4513]" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-3 p-4 bg-white rounded-xl border-2 border-[#E8D5C4] shadow-lg">
+              <div className="space-y-3">
+                {/* District */}
+                <div className="relative">
+                  <button
+                    onClick={() => toggleDropdown("district")}
+                    className="flex items-center justify-between w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
+                  >
+                    <div className="flex items-center gap-2">
+                      <School size={18} className="text-[#8B4513]" />
+                      <span className="text-sm font-medium text-[#8B4513]">School District</span>
+                    </div>
+                    <span className="text-sm text-[#555]">{currentDistrict.name}</span>
+                  </button>
+                  {openDropdown === "district" && (
+                    <div className="mt-2 bg-white rounded-xl shadow-lg border border-[#E8D5C4]">
+                      {SCHOOL_DISTRICTS.map((district, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => handleDistrictChange(district.code)}
+                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
+                            selectedDistrict === district.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
+                          }`}
+                        >
+                          <p className="text-sm text-[#2C2C2C]">{district.name}</p>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Province */}
+                <div className="relative">
+                  <button
+                    onClick={() => toggleDropdown("province")}
+                    className="flex items-center justify-between w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Globe size={18} className="text-[#8B4513]" />
+                      <span className="text-sm font-medium text-[#8B4513]">Province</span>
+                    </div>
+                    <span className="text-sm text-[#555]">{currentProvince.name}</span>
+                  </button>
+                  {openDropdown === "province" && (
+                    <div className="mt-2 bg-white rounded-xl shadow-lg border border-[#E8D5C4] max-h-48 overflow-y-auto">
+                      {PROVINCES.map((province, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => handleProvinceChange(province.code)}
+                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
+                            filters.province === province.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
+                          }`}
+                        >
+                          <p className="text-sm text-[#2C2C2C]">{province.name}</p>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Subscriptions */}
+                <div>
+                  <p className="text-sm font-medium text-[#8B4513] mb-2">EdTech Subscriptions</p>
+                  <div className="flex flex-wrap gap-2">
+                    {EDTECH_SUBSCRIPTIONS.map((sub) => {
+                      const isSelected = selectedSubscriptions.includes(sub.id)
+                      return (
+                        <button
+                          key={sub.id}
+                          onClick={() => handleSubscriptionToggle(sub.id)}
+                          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                            isSelected
+                              ? "bg-[#8B4513] text-white"
+                              : "bg-white border border-[#E8D5C4] text-[#555] hover:border-[#8B4513]"
+                          }`}
+                        >
+                          {sub.name}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                {/* Settings */}
+                <button
+                  onClick={() => {
+                    setIsSettingsModalOpen(true)
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="flex items-center gap-2 w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
+                >
+                  <Settings size={18} className="text-[#8B4513]" />
+                  <span className="text-sm font-medium text-[#8B4513]">Settings</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </header>
 

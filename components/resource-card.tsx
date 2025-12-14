@@ -114,7 +114,7 @@ export default function CompactResourceCard({ resource }) {
       bg: "bg-[#FFF5ED]",
       border: "border-[#FFB627]",
       badge: "bg-gradient-to-r from-[#FF6B35] to-[#C65D3B] text-white",
-      hover: "hover:border-[#FFB635]",
+      hover: "hover:border-[#FFB627]",
     },
     "Financial Literacy": {
       bg: "bg-[#FFF5ED]",
@@ -213,17 +213,17 @@ export default function CompactResourceCard({ resource }) {
       <div
         className={`rounded-2xl border-2 ${colors.border} ${colors.bg} shadow-md ${colors.hover} transition-all duration-200 overflow-hidden hover:shadow-lg`}
       >
-        <div className="bg-white p-3 border-b border-[#E8D5C4]">
+        <div className="bg-white p-2 md:p-3 border-b border-[#E8D5C4]">
           <div className="flex items-start justify-between gap-2 mb-2">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 md:gap-2">
               <span
-                className={`px-2.5 py-1 bg-gradient-to-r ${provinceColor} text-white text-xs font-bold rounded-xl shadow-sm`}
+                className={`px-2.5 py-1 bg-gradient-to-r ${provinceColor} text-white text-xs md:text-sm font-bold rounded-xl shadow-sm`}
               >
                 {provinceAbbr}
               </span>
 
               <span
-                className={`px-2.5 py-1 bg-gradient-to-r ${subjectColor} text-white text-xs font-bold rounded-xl shadow-sm`}
+                className={`px-2.5 py-1 bg-gradient-to-r ${subjectColor} text-white text-xs md:text-sm font-bold rounded-xl shadow-sm`}
               >
                 Grade {displayGrade} {subject}
               </span>
@@ -233,13 +233,13 @@ export default function CompactResourceCard({ resource }) {
                   {resource.strand.slice(0, 3).map((strandItem, index) => (
                     <span
                       key={index}
-                      className="px-2.5 py-1 bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white text-xs font-bold rounded-xl shadow-sm"
+                      className="px-2.5 py-1 bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white text-xs md:text-sm font-bold rounded-xl shadow-sm"
                     >
                       {strandItem}
                     </span>
                   ))}
                   {resource.strand.length > 3 && (
-                    <span className="px-2.5 py-1 bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white text-xs font-bold rounded-xl shadow-sm">
+                    <span className="px-2.5 py-1 bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white text-xs md:text-sm font-bold rounded-xl shadow-sm">
                       +{resource.strand.length - 3}
                     </span>
                   )}
@@ -252,29 +252,31 @@ export default function CompactResourceCard({ resource }) {
                 return (
                   <div key={index} className="relative group">
                     <span
-                      className="px-2.5 py-1 text-white text-xs font-bold rounded-xl shadow-sm flex items-center justify-center cursor-help"
+                      className="px-2.5 py-1 text-white text-xs md:text-sm font-bold rounded-xl shadow-sm flex items-center justify-center cursor-help"
                       style={{ backgroundColor: iconColor }}
                     >
                       <IconComponent className="w-3.5 h-3.5" />
                     </span>
                     <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-[100] whitespace-nowrap">
-                      <div className="bg-[#2C2C2C] text-white text-xs rounded-lg px-3 py-1.5 shadow-xl">{type}</div>
+                      <div className="bg-[#2C2C2C] text-white text-xs md:text-sm rounded-lg px-3 py-1.5 shadow-xl">
+                        {type}
+                      </div>
                     </div>
                   </div>
                 )
               })}
             </div>
 
-            <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
               <div className="text-right">
-                <p className="text-xs font-semibold text-gray-900 leading-tight">
+                <p className="text-[10px] md:text-xs font-semibold text-gray-900 leading-tight">
                   {resource.publisher_creator || "Unknown"}
                 </p>
-                <p className="text-[10px] text-gray-500">{resource.year_published || ""}</p>
+                <p className="text-[9px] md:text-[10px] text-gray-500">{resource.year_published || ""}</p>
               </div>
               <button
                 onClick={handleToggleSave}
-                className={`p-1.5 rounded-xl transition-all duration-200 ${
+                className={`p-1.5 rounded-xl transition-all duration-200 min-h-[36px] min-w-[36px] flex items-center justify-center ${
                   isSaved
                     ? "bg-gradient-to-r from-[#FF6B35] to-[#C65D3B] text-white shadow-md"
                     : "bg-[#F5F5F5] text-[#A8998E] hover:bg-[#FFE5CC]"
@@ -291,36 +293,38 @@ export default function CompactResourceCard({ resource }) {
               <img
                 src={imageUrl || "/placeholder.svg"}
                 alt={`${resource.strand?.[0]} illustration`}
-                className="w-16 h-16 rounded-xl object-cover shadow-sm"
+                className="w-14 h-14 md:w-16 md:h-16 rounded-xl object-cover shadow-sm"
               />
             </div>
 
             <div className="flex-1 min-w-0">
-              <h3 className="text-base font-bold text-[#2C2C2C] mb-1 leading-tight">
+              <h3 className="text-sm md:text-base font-bold text-[#2C2C2C] mb-1 leading-tight">
                 {resource.topic_title || `${resource.strand?.[0]} – Grade ${displayGrade}`}
               </h3>
-              <p className="text-xs text-[#666] leading-relaxed line-clamp-2">{description}</p>
+              <p className="text-[11px] md:text-xs text-[#666] leading-relaxed line-clamp-2">{description}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white px-3 py-2 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="bg-white px-2 md:px-3 py-2 flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 md:gap-2">
             {resource.curriculum_expectations && resource.curriculum_expectations.length > 0 && (
               <div className="relative group/curriculumTooltip">
                 <div className="flex items-center gap-1 px-2 py-1 bg-[#E8F5E9] rounded-lg cursor-help">
                   <Check className="w-3.5 h-3.5 text-[#90D356]" strokeWidth={3} />
-                  <span className="text-xs font-bold text-[#90D356]">{resource.curriculum_expectations.length}</span>
+                  <span className="text-xs md:text-sm font-bold text-[#90D356]">
+                    {resource.curriculum_expectations.length}
+                  </span>
                 </div>
 
                 <div className="absolute bottom-full left-0 mb-2 w-[90%] min-w-[600px] max-w-[800px] opacity-0 group-hover/curriculumTooltip:opacity-100 transition-opacity pointer-events-none z-[100]">
-                  <div className="bg-[#2C2C2C] text-white text-xs rounded-2xl p-4 shadow-xl max-h-64 overflow-y-auto">
+                  <div className="bg-[#2C2C2C] text-white text-xs md:text-sm rounded-2xl p-4 shadow-xl max-h-64 overflow-y-auto">
                     <p className="font-bold mb-2">
                       Curriculum Expectations ({resource.curriculum_expectations.length})
                     </p>
                     <ul className="space-y-2">
                       {resource.curriculum_expectations.map((exp, i) => (
-                        <li key={i} className="text-[11px] leading-relaxed">
+                        <li key={i} className="text-[11px] md:text-[12px] leading-relaxed">
                           {CURRICULUM_DESCRIPTIONS[exp] ? (
                             <>
                               <strong>{exp}:</strong> {CURRICULUM_DESCRIPTIONS[exp]}
@@ -348,7 +352,7 @@ export default function CompactResourceCard({ resource }) {
             {resource.is_paid && (
               <div className="flex items-center justify-center px-2 py-1 bg-[#FFE5CC] rounded-lg">
                 <span
-                  className="text-[#C65D3B] text-base font-black"
+                  className="text-[#C65D3B] text-base md:text-sm font-black"
                   style={{ fontFamily: "ui-rounded, system-ui, sans-serif" }}
                 >
                   $
@@ -357,19 +361,21 @@ export default function CompactResourceCard({ resource }) {
             )}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 md:gap-3">
             <button
               onClick={() => setShowReviewsModal(true)}
-              className="flex items-center gap-1 px-2 py-1 hover:bg-stone-100 rounded-lg transition-colors"
+              className="flex items-center gap-1 px-2 py-1 hover:bg-stone-100 rounded-lg transition-colors min-h-[44px]"
               aria-label="View reviews"
             >
               <MessageSquare className="w-4 h-4 text-stone-600" />
-              {reviewCount > 0 && <span className="text-sm text-stone-600 font-medium">{reviewCount}</span>}
+              {reviewCount > 0 && (
+                <span className="text-sm md:text-base text-stone-600 font-medium">{reviewCount}</span>
+              )}
             </button>
 
             <div className="flex items-center gap-1">
               <Star className="w-4 h-4 fill-[#FFB627] text-[#FFB627]" />
-              <span className="text-sm text-gray-600 font-medium">{generateRating(resource.url)}</span>
+              <span className="text-xs md:text-sm text-gray-600 font-medium">{generateRating(resource.url)}</span>
             </div>
 
             <button
@@ -379,11 +385,12 @@ export default function CompactResourceCard({ resource }) {
                 }
               }}
               disabled={!resource.url}
-              className={`py-1.5 px-4 ${colors.badge} font-semibold rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 text-sm flex items-center justify-center gap-1.5 transform hover:scale-105 ${
+              className={`py-2 px-3 md:px-4 ${colors.badge} font-semibold rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 text-xs md:text-sm flex items-center justify-center gap-1.5 transform hover:scale-105 min-h-[44px] ${
                 !resource.url ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
-              View Resource
+              <span className="hidden sm:inline">View Resource</span>
+              <span className="sm:hidden">View</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </button>
           </div>
