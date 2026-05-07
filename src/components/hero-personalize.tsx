@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Sparkles, RotateCcw } from "lucide-react"
+import { RotateCcw } from "lucide-react"
 import InlinePicker, { type PickerOption } from "@/components/inline-picker"
 import type { Filters } from "@/lib/types"
 
@@ -81,57 +81,50 @@ export default function HeroPersonalize({
       />
 
       <motion.div
-        initial={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mx-auto max-w-[1500px] px-4 md:px-6 pt-6 pb-5 md:pt-8 md:pb-6"
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mx-auto max-w-[1500px] px-4 md:px-6 py-3 md:py-4"
       >
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#C65D3B]">
-          <Sparkles size={14} className="text-[#FF6B35]" />
-          Curriculum-aligned · Canadian classrooms
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-2xl md:text-3xl font-semibold tracking-tight text-[#2C2C2C] leading-tight">
+          <span>I teach</span>
+          <InlinePicker
+            value={primaryGrade}
+            placeholder="any grade"
+            options={GRADES}
+            onChange={(v) => setFilters({ ...filters, grade: v })}
+            ariaLabel="Choose grade"
+          />
+          <InlinePicker
+            value={filters.subject || ""}
+            placeholder="any subject"
+            options={SUBJECTS}
+            onChange={(v) => setFilters({ ...filters, subject: v, strand: "" })}
+            ariaLabel="Choose subject"
+          />
+          <span>in</span>
+          <InlinePicker
+            value={filters.province || ""}
+            placeholder="anywhere in Canada"
+            options={PROVINCES}
+            onChange={(v) => setFilters({ ...filters, province: v })}
+            ariaLabel="Choose province"
+          />
+          {filters.subject && (
+            <>
+              <span className="text-[#A8998E]">·</span>
+              <InlinePicker
+                value={filters.strand || ""}
+                placeholder="any strand"
+                options={strandOptions}
+                onChange={(v) => setFilters({ ...filters, strand: v })}
+                ariaLabel="Choose strand"
+              />
+            </>
+          )}
         </div>
 
-        <div className="mt-3 flex flex-col gap-2 md:flex-row md:flex-wrap md:items-center">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-2xl md:text-3xl font-semibold tracking-tight text-[#2C2C2C] leading-snug">
-            <span>I teach</span>
-            <InlinePicker
-              value={primaryGrade}
-              placeholder="any grade"
-              options={GRADES}
-              onChange={(v) => setFilters({ ...filters, grade: v })}
-              ariaLabel="Choose grade"
-            />
-            <InlinePicker
-              value={filters.subject || ""}
-              placeholder="any subject"
-              options={SUBJECTS}
-              onChange={(v) => setFilters({ ...filters, subject: v, strand: "" })}
-              ariaLabel="Choose subject"
-            />
-            <span>in</span>
-            <InlinePicker
-              value={filters.province || ""}
-              placeholder="anywhere in Canada"
-              options={PROVINCES}
-              onChange={(v) => setFilters({ ...filters, province: v })}
-              ariaLabel="Choose province"
-            />
-            {filters.subject && (
-              <>
-                <span className="text-[#A8998E]">·</span>
-                <InlinePicker
-                  value={filters.strand || ""}
-                  placeholder="any strand"
-                  options={strandOptions}
-                  onChange={(v) => setFilters({ ...filters, strand: v })}
-                  ariaLabel="Choose strand"
-                />
-              </>
-            )}
-          </div>
-        </div>
-
-        <div className="mt-3 flex flex-wrap items-center gap-3">
+        <div className="mt-2 flex flex-wrap items-center gap-2.5">
           <ResultsCounter count={resultCount} />
 
           <AnimatePresence>
