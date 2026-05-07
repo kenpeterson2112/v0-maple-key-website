@@ -2,10 +2,10 @@
 import { Settings, Bookmark, School, Menu, X, MapPin, ChevronDown, LogIn, SlidersHorizontal } from "lucide-react"
 import type { Filters } from "@/lib/types"
 import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
 import BookmarksModal from "@/components/bookmarks-modal"
 import SettingsModal from "@/components/settings-modal"
 import { useBookmarks } from "@/lib/bookmarks-context"
+import { withBasePath } from "@/lib/base-path"
 
 const EDTECH_SUBSCRIPTIONS = [
   { id: "edwin", name: "Edwin" },
@@ -109,13 +109,12 @@ export default function SearchHeader({
           {/* Desktop toolbar */}
           <div className="hidden md:flex items-center justify-between gap-4">
             <div className="flex items-center">
-              <Image
-                src="/Maple_Key_Transp_Background.png"
+              <img
+                src={withBasePath("/Maple_Key_Transp_Background.png")}
                 alt="Maple Key Logo"
                 width={140}
                 height={48}
                 className="h-12 w-auto object-contain"
-                priority
               />
             </div>
 
@@ -277,13 +276,12 @@ export default function SearchHeader({
 
           {/* Mobile toolbar */}
           <div className="flex md:hidden items-center justify-between">
-            <Image
-              src="/Maple_Key_Transp_Background.png"
+            <img
+              src={withBasePath("/Maple_Key_Transp_Background.png")}
               alt="Maple Key Logo"
               width={120}
               height={40}
               className="h-10 w-auto object-contain"
-              priority
             />
             <div className="flex items-center gap-1.5">
               <button

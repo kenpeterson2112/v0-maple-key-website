@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useRef, useState } from "react"
 import SearchHeader from "@/components/search-header"
 import SidebarFilters from "@/components/sidebar-filters"
@@ -19,7 +17,7 @@ const EMPTY_FILTERS: Filters = {
   learningType: "",
 }
 
-export default function Home() {
+export default function App() {
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS)
   const [inferred, setInferred] = useState(false)
   const [hydrated, setHydrated] = useState(false)
@@ -33,7 +31,6 @@ export default function Home() {
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false)
   const [resultCount, setResultCount] = useState(0)
 
-  // On mount, hydrate from localStorage (or fall back to timezone inference).
   useEffect(() => {
     const prefs = getPrefs()
     setFilters({
@@ -47,7 +44,6 @@ export default function Home() {
     setHydrated(true)
   }, [])
 
-  // Persist filters to localStorage on user-driven changes (skip the hydration write).
   useEffect(() => {
     if (!hydrated) return
     if (skipPersistOnce.current) {
@@ -99,11 +95,7 @@ export default function Home() {
       <div className="flex flex-1 min-h-0">
         <SidebarFilters onFilterChange={handleSidebarFilterChange} sidebarFilters={sidebarFilters} />
         <div className="flex-1 min-w-0">
-          <ResultsSection
-            filters={filters}
-            sidebarFilters={sidebarFilters}
-            onCountChange={setResultCount}
-          />
+          <ResultsSection filters={filters} sidebarFilters={sidebarFilters} onCountChange={setResultCount} />
         </div>
       </div>
 

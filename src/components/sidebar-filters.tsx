@@ -13,7 +13,7 @@ import {
   DollarSign,
   CheckCircle2,
 } from "lucide-react"
-import Image from "next/image"
+import { withBasePath } from "@/lib/base-path"
 
 interface SidebarFiltersProps {
   onFilterChange: (filterGroup: string, selectedItems: string[]) => void
@@ -118,8 +118,8 @@ export default function SidebarFilters({ onFilterChange, sidebarFilters: externa
   const getAccessibilityIcon = (accessibility: string) => {
     if (accessibility === "No concerns") {
       return (
-        <Image
-          src="/icons/accessibility-green.svg"
+        <img
+          src={withBasePath("/icons/accessibility-green.svg")}
           alt="No concerns"
           width={14}
           height={14}
@@ -128,8 +128,8 @@ export default function SidebarFilters({ onFilterChange, sidebarFilters: externa
       )
     } else if (accessibility === "Some Concerns (see details)") {
       return (
-        <Image
-          src="/icons/accessibility-yellow.svg"
+        <img
+          src={withBasePath("/icons/accessibility-yellow.svg")}
           alt="Some concerns"
           width={14}
           height={14}
@@ -138,8 +138,8 @@ export default function SidebarFilters({ onFilterChange, sidebarFilters: externa
       )
     } else if (accessibility === "Not Accessible") {
       return (
-        <Image
-          src="/icons/accessibility-orange.svg"
+        <img
+          src={withBasePath("/icons/accessibility-orange.svg")}
           alt="Not accessible"
           width={14}
           height={14}
