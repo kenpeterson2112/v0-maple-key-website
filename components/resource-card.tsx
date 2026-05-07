@@ -20,6 +20,7 @@ import { useBookmarks } from "@/lib/bookmarks-context"
 import { useState } from "react"
 import ReviewsModal from "./reviews-modal"
 import { getReviewsForResource } from "@/lib/reviews-data"
+import { withBasePath } from "@/lib/base-path"
 
 export default function CompactResourceCard({ resource }) {
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks()
@@ -291,7 +292,7 @@ export default function CompactResourceCard({ resource }) {
           <div className="flex gap-2">
             <div className="flex-shrink-0">
               <img
-                src={imageUrl || "/placeholder.svg"}
+                src={imageUrl || withBasePath("/placeholder.svg")}
                 alt={`${resource.strand?.[0]} illustration`}
                 className="w-14 h-14 md:w-16 md:h-16 rounded-xl object-cover shadow-sm"
               />
@@ -342,7 +343,7 @@ export default function CompactResourceCard({ resource }) {
 
             <div className="flex items-center justify-center px-1.5 py-1 rounded-lg">
               <img
-                src={accessLevel.icon || "/placeholder.svg"}
+                src={withBasePath(accessLevel.icon || "/placeholder.svg")}
                 alt={accessLevel.label}
                 className="w-6 h-6"
                 title={accessLevel.label}
