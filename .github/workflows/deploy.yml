@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build and publish to docs/
 
 on:
   push:
@@ -6,22 +6,22 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: docs-build
   cancel-in-progress: true
-
-env:
-  NEXT_PUBLIC_BASE_PATH: /v0-maple-key-website
 
 jobs:
   build:
+    # Skip the run that this workflow itself creates (loop guard).
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
 
       - uses: pnpm/action-setup@v4
         with:
@@ -35,21 +35,23 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm build
+        env:
+          VITE_BASE_PATH: /v0-maple-key-website/
 
-      - run: touch out/.nojekyll
+      - name: Refresh docs/ from dist/
+        run: |
+          rm -rf docs
+          mv dist docs
+          touch docs/.nojekyll
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit and push docs/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to docs/."
+            exit 0
+          fi
+          git commit -m "build: refresh docs/ [skip ci]"
+          git push

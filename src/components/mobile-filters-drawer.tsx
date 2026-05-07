@@ -14,7 +14,7 @@ import {
   CheckCircle2,
   SlidersHorizontal,
 } from "lucide-react"
-import Image from "next/image"
+import { withBasePath } from "@/lib/base-path"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from "@/components/ui/sheet"
 import type { Filters } from "@/lib/types"
 
@@ -148,8 +148,8 @@ export default function MobileFiltersDrawer({
   const getAccessibilityIcon = (accessibility: string) => {
     if (accessibility === "No concerns") {
       return (
-        <Image
-          src="/icons/accessibility-green.svg"
+        <img
+          src={withBasePath("/icons/accessibility-green.svg")}
           alt="No concerns"
           width={14}
           height={14}
@@ -158,8 +158,8 @@ export default function MobileFiltersDrawer({
       )
     } else if (accessibility === "Some Concerns (see details)") {
       return (
-        <Image
-          src="/icons/accessibility-yellow.svg"
+        <img
+          src={withBasePath("/icons/accessibility-yellow.svg")}
           alt="Some concerns"
           width={14}
           height={14}
@@ -168,8 +168,8 @@ export default function MobileFiltersDrawer({
       )
     } else if (accessibility === "Not Accessible") {
       return (
-        <Image
-          src="/icons/accessibility-orange.svg"
+        <img
+          src={withBasePath("/icons/accessibility-orange.svg")}
           alt="Not accessible"
           width={14}
           height={14}
