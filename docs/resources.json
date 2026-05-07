@@ -1,0 +1,3875 @@
+[
+  {
+    "timestamp": "11/10/2025 9:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mathies.ca/activities.php",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Mathies Data Tools",
+    "description": "Interactive tools from the Ontario Ministry of Education for exploring data visualization, including bar graphs, pictographs, and circle graphs. Students can input their own data and see it represented in multiple formats.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Ontario Ministry of Education",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:22:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mathsisfun.com/data/",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Math is Fun: Data and Graphs",
+    "description": "Clear explanations of data concepts with interactive examples. Covers types of graphs, measures of central tendency, and data interpretation with practice problems.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Math is Fun",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:34:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.nelson.com/mathfocus",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Nelson Math Focus: Data Management Unit",
+    "description": "Comprehensive textbook unit covering data collection, organization, display, and analysis. Includes probability connections and real-world applications appropriate for Ontario curriculum.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Nelson Education",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:58:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.edu.gov.mb.ca/k12/cur/math/resources.html",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Manitoba Math Connections: Data Management",
+    "description": "Curriculum-aligned resources for teaching data management concepts including data collection methods, graph selection, and statistical analysis appropriate for middle years students.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Manitoba Education",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "MB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:12:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.polypad.org/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Polypad: Probability Manipulatives",
+    "description": "Virtual manipulatives for exploring probability including dice, coins, spinners, and cards. Students can conduct experiments and collect data in an intuitive drag-and-drop interface.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Mathigon",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.turtlediary.com/games/probability.html",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Turtle Diary: Probability Games for Kids",
+    "description": "Age-appropriate probability games with immediate feedback. Covers basic vocabulary (certain, impossible, likely, unlikely) and simple probability calculations.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Turtle Diary",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:46:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.probabilitygames.org/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Probability Games Collection",
+    "description": "Curated collection of online probability games and activities. Includes spinners, dice games, card activities, and marble probability experiments.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Probability Games",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/7/2025 17:09:59",
+    "submitted_by": "SAb",
+    "url": "https://youtu.be/BA2xWdAdy3s?si=T6C_FufCPBIJ6O51",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Wacky Number Songs - Probability",
+    "description": "Let's play the probability game! Probability is the chance of an event occurring - certain, likely, unlikely, or impossible. For example, it will be impossible not to tap your feet during Ava's song about probability!",
+    "modality": "Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "TVO Kids",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/7/2025 17:12:48",
+    "submitted_by": "Sab",
+    "url": "https://youtu.be/lYXDQ5-I7Qk?si=3-l1J63Y4xFBxnSH",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Certain, likely, equally likely, unlikely or impossible",
+    "description": "This video talks about probability - certain, likely, equally likely, unlikely or impossible events.",
+    "modality": "Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "KidsMathLogic",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:47:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mentorcanada.ca/financial-mentorship",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Junior Achievement: Economics for Success",
+    "description": "In-class volunteer-led program teaching students about personal finance, career exploration, and the connection between education and future earning potential. Sessions cover budgeting, saving, and financial goal-setting.",
+    "modality": "Guest Speaker",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Junior Achievement Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:56:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mymoney.gov/education/students",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Making Cents: Youth Financial Education",
+    "description": "Interactive financial literacy program covering earning, saving, spending, and sharing money. Includes goal-setting activities and simulations of real financial decisions.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Financial Literacy and Education Commission",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:59:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.coast.capital/community/financial-literacy",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Coast Capital: Money Skills for Students",
+    "description": "BC-based credit union offering free financial literacy workshops and resources. Topics include opening first accounts, saving for goals, and understanding interest.",
+    "modality": "Online, Guest Speaker",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Coast Capital Savings",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:21:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.thelearningexchange.ca/projects/financial-literacy/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "The Learning Exchange: Money Matters",
+    "description": "Ontario-based resources for teaching financial literacy, including lesson plans, student activities, and assessment tools aligned with the Ontario curriculum.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "The Learning Exchange",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:37:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.consumered.ca/teachers",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Consumer Ed: Smart Shopping Skills",
+    "description": "Lessons on consumer awareness including understanding advertising, comparing prices, and making informed purchasing decisions. Includes activities analyzing real ads and promotions.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Consumer Education Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/25/2025 21:43:08",
+    "submitted_by": "Ken",
+    "url": "https://www.tourguys.ca/school-tours/downtown-toronto-school-tour",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Downtown Toronto Tours (Bay Street)",
+    "description": "This 90-minute walking tour introduces students to Toronto's Financial District and surrounding civic spaces. Students will examine how architecture, commerce, government, and public space intersect in a modern city.",
+    "modality": "Trip",
+    "accessibility": [
+      "Not Accessible"
+    ],
+    "publisher_creator": "Tour Guys",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/12/2025 11:00:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.readwritethink.org/classroom-resources/lesson-plans",
+    "strand": [
+      "Reading",
+      "Writing"
+    ],
+    "topic_title": "ReadWriteThink: Literacy Lesson Plans",
+    "description": "Comprehensive literacy resources including lesson plans, student interactives, and printables for reading comprehension, writing skills, and literary analysis.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "NCTE/IRA",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://newsela.com/",
+    "strand": [
+      "Reading",
+      "Media Literacy"
+    ],
+    "topic_title": "Newsela: Leveled Current Events",
+    "description": "Current events articles available at multiple reading levels. Students read about real-world topics while building comprehension and critical thinking skills.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Newsela",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.storyboardthat.com/education",
+    "strand": [
+      "Writing",
+      "Media Literacy"
+    ],
+    "topic_title": "Storyboard That: Visual Storytelling",
+    "description": "Digital storyboard creator for visual storytelling, plot mapping, and character analysis. Students create comic-style narratives to demonstrate comprehension.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Storyboard That",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.vocabulary.com/",
+    "strand": [
+      "Reading",
+      "Writing"
+    ],
+    "topic_title": "Vocabulary.com: Adaptive Word Learning",
+    "description": "Adaptive vocabulary platform that uses spaced repetition and context-based learning. Students build vocabulary through reading and targeted practice.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Vocabulary.com",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:35:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.scholastic.ca/education/story-starters/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "Scholastic Story Starters",
+    "description": "Interactive story prompt generator that creates unique writing scenarios. Students spin wheels to get character, setting, and plot elements for creative writing.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Scholastic Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:50:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.literacyshed.com/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "The Literacy Shed: Visual Writing Prompts",
+    "description": "Collection of short films, images, and animations to inspire creative writing. Each resource includes teaching ideas and writing frames.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "The Literacy Shed",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:00:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.storyjumper.com/",
+    "strand": [
+      "Writing",
+      "Media Literacy"
+    ],
+    "topic_title": "StoryJumper: Digital Book Creator",
+    "description": "Students create and publish their own illustrated digital books. Supports creative writing, storytelling, and digital literacy skills.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "StoryJumper",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.epic.com/",
+    "strand": [
+      "Reading"
+    ],
+    "topic_title": "Epic!: Digital Library for Students",
+    "description": "Digital library with thousands of books, audiobooks, and educational videos. Teachers can assign reading and track student progress.",
+    "modality": "Online, Books & Print Media, Audio/Podcast",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Epic!",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 9:33:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.scienceworld.ca/resources/activities",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Science World: Data Collection Activities",
+    "description": "Hands-on science activities that incorporate data collection, analysis, and graphing. Students conduct experiments and learn to organize, represent, and interpret their findings using various data displays.",
+    "modality": "Interactive, Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Science World BC",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 11:03:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.ontariosciencecentre.ca/teachers/resources",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Ontario Science Centre: Data Detectives",
+    "description": "Hands-on workshop where students collect, analyze, and present data from science experiments. Available as in-person field trip or virtual classroom visit.",
+    "modality": "Trip, Guest Speaker",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Ontario Science Centre",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 11:43:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.bchydro.com/powersmart/educational-programs.html",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "BC Hydro: Energy Data Analysis",
+    "description": "Students analyze real energy consumption data, create graphs, and interpret trends. Connects math skills to environmental awareness and energy conservation.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "BC Hydro",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 10:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://climate.nasa.gov/explore/interactives",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "NASA Climate Data Visualizations",
+    "description": "Explore real climate data through interactive visualizations. Students analyze temperature trends, sea level changes, and atmospheric data while developing skills in reading and interpreting scientific graphs.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "NASA",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://spaceplace.nasa.gov/menu/solar-system/",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "NASA Space Place: Solar System",
+    "description": "Explore the solar system through games, activities, and articles designed for students. Learn about planets, moons, asteroids, and space exploration missions.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "NASA",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:45:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.switchzoo.com/",
+    "strand": [
+      "Life Systems"
+    ],
+    "topic_title": "Switch Zoo: Animal Adaptations",
+    "description": "Interactive games exploring animal adaptations, habitats, and classification. Students build imaginary animals and explore how physical features help animals survive.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Switch Zoo",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.thecanadianencyclopedia.ca/en/collection/indigenous-peoples",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Canadian Encyclopedia: Indigenous Peoples",
+    "description": "Comprehensive articles on First Nations, M??tis, and Inuit peoples, cultures, histories, and contemporary issues. Includes educator resources and study guides.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Historica Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:40:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.parl.ca/education/",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "Parliament of Canada: Educational Resources",
+    "description": "Learn how Canada's Parliament works through interactive resources, virtual tours, and lesson plans on democracy, legislation, and civic participation.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Parliament of Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:55:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.thelearningpartnership.ca/what-we-do/student-programs/my-canada-project",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "My Canada Project",
+    "description": "Students create multimedia projects celebrating Canadian identity and diversity. Connects classrooms across Canada for collaborative learning.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "The Learning Partnership",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.worldgeography.games/",
+    "strand": [
+      "People and Environments"
+    ],
+    "topic_title": "World Geography Games",
+    "description": "Interactive map games for learning countries, capitals, physical features, climates, and regions. Builds geographic literacy through gamified practice.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "World Geography Games",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.noredink.com/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "NoRedInk: Grammar and Writing Practice",
+    "description": "Adaptive grammar and writing platform that personalizes practice using students' interests. Covers grammar, punctuation, sentence structure, and essay writing.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "NoRedInk",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.writingfix.com/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "WritingFix: Creative Writing Prompts",
+    "description": "Hundreds of creative writing prompts and lessons organized by trait (ideas, organization, voice, etc.). Includes mentor texts and student examples.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Northern Nevada Writing Project",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:45:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.tweentribune.com/",
+    "strand": [
+      "Reading",
+      "Media Literacy"
+    ],
+    "topic_title": "Tween Tribune: Student News",
+    "description": "Daily news articles written for students with comprehension questions and writing prompts. Articles available at multiple Lexile levels.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Smithsonian",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.flipgrid.com/",
+    "strand": [
+      "Oral Communication"
+    ],
+    "topic_title": "Flip: Video Discussion Platform",
+    "description": "Students record and share short video responses to prompts. Builds oral communication skills and creates inclusive classroom discussions.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Microsoft",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mediasmartscanada.ca/",
+    "strand": [
+      "Media Literacy"
+    ],
+    "topic_title": "MediaSmarts: Digital and Media Literacy",
+    "description": "Canadian resources for teaching digital and media literacy. Includes lessons on evaluating online information, understanding advertising, and digital citizenship.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "MediaSmarts",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 13:06:00",
+    "submitted_by": "Resource Team",
+    "url": "https://ingeniumcanada.org/scitech/education",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Ingenium: Science and Data Discovery",
+    "description": "Educational programs from Canada's science and technology museums. Includes data-focused activities connecting historical innovations to modern data practices.",
+    "modality": "Trip, Online",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Ingenium Canada",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 12:04:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.worldwildlife.org/teaching-resources/toolkits/data",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "WWF: Wildlife Population Data",
+    "description": "Analyze real wildlife population data and conservation statistics. Students create graphs, identify trends, and discuss the implications of data for environmental decision-making.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "World Wildlife Fund",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 12:44:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.letstalkscience.ca/educational-resources/stem-in-context/data",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Let's Talk Science: Data in STEM Careers",
+    "description": "Explore how scientists and engineers use data in their work. Includes profiles of Canadian STEM professionals like Climate Scientists, real-world data problems, and career connections.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Let's Talk Science",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:00:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.exploratorium.edu/snacks/subject/life-sciences",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Exploratorium: Life Sciences Experiments",
+    "description": "Hands-on experiments exploring cells, ecosystems, and biodiversity. Each activity includes materials lists, procedures, and discussion questions for classroom use.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Exploratorium",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.chemicalsafetyfacts.org/chemistry-resources-teachers/",
+    "strand": [
+      "Matter and Energy"
+    ],
+    "topic_title": "Chemistry in Everyday Life",
+    "description": "Resources connecting chemistry concepts to everyday products and materials. Students explore states of matter, chemical reactions, and material properties through relatable examples.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "American Chemistry Council",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.inaturalist.org/pages/teacher-guide",
+    "strand": [
+      "Life Systems"
+    ],
+    "topic_title": "iNaturalist: Citizen Science for Classrooms",
+    "description": "Connect students with real biodiversity research through citizen science. Students photograph and identify local species, contributing to actual scientific databases.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "California Academy of Sciences",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:00:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.historymuseum.ca/learn/",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Canadian Museum of History: Learning Resources",
+    "description": "Educational resources exploring Canadian history, Indigenous heritage, and national identity. Includes virtual tours, primary sources, and lesson plans.",
+    "modality": "Online, Trip",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Canadian Museum of History",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://indigenouspeoplesatlasofcanada.ca/",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Indigenous Peoples Atlas of Canada",
+    "description": "Interactive atlas featuring Indigenous perspectives on geography, history, and culture. Created by and for Indigenous peoples with educator resources.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Canadian Geographic",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:45:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.rcaanc-cirnac.gc.ca/eng/1100100013785/1529102490303",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Crown-Indigenous Relations: Treaties",
+    "description": "Information on historical and modern treaties between Canada and Indigenous peoples. Includes maps, timelines, and educational resources.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Government of Canada",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.glenbow.org/education/",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Glenbow Museum: Western Canadian History",
+    "description": "Resources exploring Alberta and Western Canadian history, including Indigenous cultures, settlement, and regional development.",
+    "modality": "Online, Trip",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Glenbow Museum",
+    "grade_level": "7",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "AB",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.poetryfoundation.org/learn",
+    "strand": [
+      "Reading"
+    ],
+    "topic_title": "Poetry Foundation: Poetry for Students",
+    "description": "Curated poetry collections with teaching guides, audio recordings, and analysis tools. Introduces students to diverse poets and poetic forms.",
+    "modality": "Online, Audio/Podcast",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Poetry Foundation",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:40:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.bbc.co.uk/bitesize/subjects/english",
+    "strand": [
+      "Reading",
+      "Writing"
+    ],
+    "topic_title": "BBC Bitesize: English Skills",
+    "description": "Comprehensive English language resources covering reading, writing, grammar, and speaking. Includes videos, quizzes, and practice activities.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "BBC",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 11:55:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.quill.org/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "Quill: Writing and Grammar Tools",
+    "description": "Free writing and grammar activities that help students become better writers. Includes sentence combining, proofreading, and grammar practice.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Quill.org",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.canva.com/education/",
+    "strand": [
+      "Media Literacy",
+      "Writing"
+    ],
+    "topic_title": "Canva for Education: Visual Communication",
+    "description": "Design platform for creating infographics, presentations, posters, and other visual media. Students develop visual communication and media literacy skills.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Canva",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:35:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.writersinelectronicresidence.ca/",
+    "strand": [
+      "Writing"
+    ],
+    "topic_title": "Writers in Electronic Residence",
+    "description": "Canadian program connecting students with professional writers online. Students receive feedback on their creative writing from published authors.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "WIER Canada",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 13:49:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.nationalgeographic.org/education/resource-library/?q=data",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "National Geographic: Data in the Real World",
+    "description": "Geographic and scientific data sets with teaching guides. Students analyze real-world data about climate, populations, and ecosystems while building data literacy skills.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "National Geographic Education",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.amnh.org/explore/ology/earth",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "AMNH OLogy: Earth Science",
+    "description": "Interactive explorations of rocks, minerals, plate tectonics, and Earth systems from the American Museum of Natural History. Includes videos, games, and hands-on activities.",
+    "modality": "Online, Interactive, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "American Museum of Natural History",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://phet.colorado.edu/en/simulations/filter?subjects=physics",
+    "strand": [
+      "Matter and Energy"
+    ],
+    "topic_title": "PhET Physics Simulations",
+    "description": "Free interactive simulations for exploring physics concepts including forces, motion, energy, and waves. Students manipulate variables and observe results in real-time.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "University of Colorado Boulder",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:35:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.earthlearningidea.com/",
+    "strand": [
+      "Earth and Space Systems"
+    ],
+    "topic_title": "Earth Learning Idea: Geology Activities",
+    "description": "Free, hands-on Earth science activities requiring minimal equipment. Topics include rock formation, erosion, plate tectonics, and geological time.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Earth Learning Idea",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://education.nationalgeographic.org/",
+    "strand": [
+      "People and Environments"
+    ],
+    "topic_title": "National Geographic Education: Geography",
+    "description": "Geography resources including maps, photographs, videos, and lesson plans exploring physical and human geography concepts worldwide.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "National Geographic",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.warmuseum.ca/learn/",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Canadian War Museum: Education Programs",
+    "description": "Resources exploring Canada's military history and its impact on Canadian identity. Includes virtual tours, primary sources, and remembrance education.",
+    "modality": "Online, Trip",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Canadian War Museum",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:35:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.bac-lac.gc.ca/eng/discover/immigration/Pages/introduction.aspx",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Library and Archives Canada: Immigration History",
+    "description": "Primary source documents and resources exploring Canada's immigration history. Students examine historical records, photographs, and personal stories.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Library and Archives Canada",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:50:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.pier21.ca/education",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Canadian Museum of Immigration: Pier 21",
+    "description": "Resources on Canadian immigration history focusing on Pier 21 in Halifax. Includes oral histories, primary documents, and interactive timelines.",
+    "modality": "Online, Trip",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Canadian Museum of Immigration",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "NS",
+    "is_paid": true,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:05:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.ourcommons.ca/About/ProcedureAndPractice3rdEdition/",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "How Parliament Works: Student Guide",
+    "description": "Simplified guide to parliamentary procedure and Canadian democracy. Explains how laws are made, the role of MPs, and citizen participation.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "House of Commons Canada",
+    "grade_level": "8",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/6/2025 9:16:06",
+    "submitted_by": "Sabrina",
+    "url": "https://www.statcan.gc.ca/en/wtc/data-literacy",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Data Literacy Training",
+    "description": "Data Literacy Training in a variety of formats, including text, activities and video. Intended for beginner adults but may be useful to advance Grade 9s.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Statistics Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 10:54:55",
+    "submitted_by": "Sab",
+    "url": "https://www.khanacademy.org/math/statistics-probability/probability-library",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Basic Probability",
+    "description": "Part of a larger online unit on Statistics and Probability, this section focuses on a basic introduction to probability.",
+    "modality": "Online, Interactive, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Khan Academy",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:17:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.ourfirsthome.ca/students",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Our First Home: Understanding Housing Costs",
+    "description": "Introduction to housing costs and what it takes to save for a first home. Students explore mortgages, down payments, and the true cost of homeownership in Canada.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CMHC",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:36:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.genome.gov/genetics-glossary",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Genetics and Probability: Punnett Squares",
+    "description": "Explore the connection between genetics and probability through Punnett square activities. Students learn how probability determines trait inheritance while practicing fraction and ratio calculations.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "National Human Genome Research Institute",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.biointeractive.org/classroom-resources",
+    "strand": [
+      "Life Systems"
+    ],
+    "topic_title": "HHMI BioInteractive: Ecology Resources",
+    "description": "High-quality videos and interactive modules exploring ecosystems, evolution, and biodiversity. Includes data-driven activities where students analyze real scientific datasets.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Howard Hughes Medical Institute",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 10:40:00",
+    "submitted_by": "Resource Team",
+    "url": "https://learn.genetics.utah.edu/",
+    "strand": [
+      "Life Systems"
+    ],
+    "topic_title": "Learn.Genetics: Cell Biology and DNA",
+    "description": "Interactive tutorials on cells, DNA, heredity, and genetics. Includes virtual labs, animations, and printable activities explaining complex biological concepts.",
+    "modality": "Online, Interactive, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "University of Utah",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Science",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.activelylearn.com/",
+    "strand": [
+      "Reading"
+    ],
+    "topic_title": "Actively Learn: Interactive Reading",
+    "description": "Platform for assigning texts with embedded questions, notes, and media. Students engage with texts through annotations and discussions.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Actively Learn",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 12:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cbc.ca/books/canadareads",
+    "strand": [
+      "Reading"
+    ],
+    "topic_title": "Canada Reads: Canadian Literature",
+    "description": "Annual CBC literary competition featuring Canadian books and authors. Teaching resources help students explore Canadian perspectives and engage in literary debate.",
+    "modality": "Online, Audio/Podcast, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CBC",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Language",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.civix.ca/",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "CIVIX: Student Vote and Civic Education",
+    "description": "Canada's leading civic education organization. Resources on democracy, elections, government structure, and active citizenship for young Canadians.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CIVIX",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 13:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.facing-history.org/resource-library",
+    "strand": [
+      "Heritage and Identity",
+      "Power and Governance"
+    ],
+    "topic_title": "Facing History: Human Rights Education",
+    "description": "Resources on genocide, human rights, and civic responsibility. Case studies include the Holocaust, residential schools, and contemporary human rights issues.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Facing History and Ourselves",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:00:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.elections.ca/content.aspx?section=vot&dir=yth&document=index&lang=e",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "Elections Canada: Youth Resources",
+    "description": "Resources on the Canadian electoral system, voting processes, and democratic participation. Designed to prepare future voters for civic engagement.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Elections Canada",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.virtualtrc.ca/",
+    "strand": [
+      "Heritage and Identity"
+    ],
+    "topic_title": "Virtual Truth and Reconciliation",
+    "description": "Interactive resources exploring residential schools and reconciliation in Canada. Includes survivor testimonies, historical documents, and educator guides.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "National Centre for Truth and Reconciliation",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "MB",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.amnesty.ca/human-rights-education/",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "Amnesty International: Human Rights Education",
+    "description": "Resources on global human rights issues, activism, and civic action. Case studies help students understand human rights in Canadian and global contexts.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Amnesty International Canada",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/12/2025 14:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.theconstitution.ca/",
+    "strand": [
+      "Power and Governance"
+    ],
+    "topic_title": "Constitution Act Education Resources",
+    "description": "Interactive exploration of Canada's Constitution, Charter of Rights, and legal foundations. Students analyze how constitutional law shapes Canadian society.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Justice Education Society",
+    "grade_level": "9",
+    "year_published": 2025,
+    "subject": "Social Studies",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": []
+  },
+  {
+    "timestamp": "11/10/2025 9:50:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.desmos.com/classroom/activities",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Desmos Classroom Activities: Statistics",
+    "description": "Free interactive activities for exploring statistical concepts including mean, median, mode, and data distributions. Real-time teacher dashboard allows monitoring of student progress and understanding.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Desmos",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:43:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.royalbcmuseum.bc.ca/visit/exhibitions/learning-resources",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Royal BC Museum: Data in History",
+    "description": "Educational resources connecting historical artifacts with data analysis. Students examine population data, trade records, and archaeological findings while developing graphing and interpretation skills.",
+    "modality": "Trip, Online",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Royal BC Museum",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "BC",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:24:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www150.statcan.gc.ca/n1/edu/index-eng.htm",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Statistics Canada: Learning Resources",
+    "description": "Official Statistics Canada educational resources including data literacy activities, infographics, and guides to understanding Canadian census and survey data.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Statistics Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:41:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.gapminder.org/dollar-street",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Gapminder: Dollar Street",
+    "description": "Explore how families at different income levels live around the world through photos and data. Students analyze economic data while developing global awareness and data interpretation skills.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Gapminder Foundation",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:32:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.openmiddle.com/category/statistics-probability/",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Open Middle: Statistics and Probability Challenges",
+    "description": "Open-ended math problems with multiple solution paths. These DOK 3 problems promote deep mathematical thinking about data analysis and probability concepts.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Open Middle",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.3",
+      "D1.4",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:52:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cira.ca/en/resources-for-teachers/digital-literacy/",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "CIRA: Data Privacy for Students",
+    "description": "Lessons on data privacy, online tracking, and digital footprints. Students learn how their data is collected and used while developing critical thinking about data in the digital age.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Canadian Internet Registration Authority",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:31:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.commonlit.org/en/texts?genre=Informational&subject=Math",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "CommonLit: Data Stories",
+    "description": "Cross-curricular reading passages featuring data and statistics. Students practice reading comprehension while analyzing charts, graphs, and statistical claims in texts.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CommonLit",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:22:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.learnalberta.ca/content/mejhm/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Alberta Math Interactives: Probability",
+    "description": "Explore probability concepts through interactive simulations including coin flips, dice rolls, and spinner experiments. Students can compare theoretical and experimental probability through hands-on digital activities.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Learn Alberta",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:27:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.explorelearning.com/gizmos/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "ExploreLearning Gizmos: Probability Labs",
+    "description": "Virtual labs for exploring probability concepts through simulations. Students can manipulate variables and see immediate results, building intuition for theoretical and experimental probability.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "ExploreLearning",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:59:00",
+    "submitted_by": "Resource Team",
+    "url": "https://nrich.maths.org/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "NRICH: Probability Problems and Puzzles",
+    "description": "Rich mathematical problems exploring probability concepts at various levels. Problems encourage mathematical reasoning and discussion, with teacher notes and solution approaches provided.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "University of Cambridge",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:51:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.virtualnerd.com/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Virtual Nerd: Probability Video Tutorials",
+    "description": "Step-by-step video explanations of probability concepts from basic to advanced. Each video includes examples and practice problems with detailed solutions.",
+    "modality": "Video, Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Virtual Nerd",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:02:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.shodor.org/interactivate/activities/probability/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Interactivate: Probability Explorations",
+    "description": "Collection of Java-based probability applets including racing games, experimental vs theoretical comparisons, and Monte Carlo simulations adapted for middle school.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Shodor Education Foundation",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:36:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mint.com/budgeting-resources",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Mint: Budgeting Basics for Beginners",
+    "description": "Learn budgeting fundamentals with interactive tools and real-world examples. Students create sample budgets and track hypothetical expenses to build money management skills.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Intuit Mint",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:08:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.afoa.ca/financial-literacy-indigenous-youth",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "AFOA: Financial Literacy for Indigenous Youth",
+    "description": "Culturally relevant financial literacy resources developed for Indigenous students. Covers traditional and contemporary perspectives on money management, saving, and community economics.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "AFOA Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.atb.com/company/community/financial-literacy/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "ATB Financial: Money Management for Youth",
+    "description": "Alberta-focused financial literacy resources including budgeting tools, saving calculators, and lessons on making smart financial decisions as a young person.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "ATB Financial",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:35:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.connexus.ca/financial-empowerment",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Connexus: Financial Empowerment Program",
+    "description": "Saskatchewan-based credit union offering financial literacy workshops and resources. Focus on community economics, cooperative models, and personal finance basics.",
+    "modality": "Guest Speaker, Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Connexus Credit Union",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "SK",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:57:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.everfi.com/courses/financial-literacy",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "EVERFI: Financial Literacy Modules",
+    "description": "Interactive digital courses covering banking, credit, investing, and financial planning. Gamified approach with assessments and teacher dashboards for progress monitoring.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "EVERFI",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:28:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.smarterthancash.org/resources-students",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Smarter Than Cash: Digital Money",
+    "description": "Explore the evolution from cash to digital payments. Students learn about debit cards, mobile payments, and online banking security while discussing the future of money.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Better Than Cash Alliance",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:46:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.scotiabank.com/ca/en/personal/advice-plus/features/articles/financial-literacy.html",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Scotiabank: Financial Literacy Hub",
+    "description": "Collection of articles, videos, and tools covering banking basics, saving strategies, and smart spending habits. Canadian-focused content with relevant examples.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Scotiabank",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:09:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cibc.com/en/special-offers/financial-literacy.html",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "CIBC: Financial Literacy for Youth",
+    "description": "Resources covering banking basics, saving strategies, and goal-setting for young Canadians. Includes interactive calculators and real-life scenarios.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CIBC",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:09:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.prodigygame.com/main-en/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Prodigy Math: Probability Adventures",
+    "description": "Game-based learning platform with adaptive probability questions embedded in an RPG adventure. Students practice probability concepts while earning rewards and progressing through storylines.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Prodigy Education",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:23:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.lovetoknow.com/parenting/kids/probability-games-kids",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Hands-On Probability Games for Kids",
+    "description": "Collection of low-prep probability games using cards, dice, spinners, and coins. Each activity includes instructions, discussion questions, and extensions for different ability levels.",
+    "modality": "Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "LoveToKnow Media",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:49:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mathplayground.com/probability_games.html",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Math Playground: Probability Games",
+    "description": "Collection of free probability games including marble drops, spinners, and dice challenges. Immediate feedback helps students build intuition for likely, unlikely, and equally likely events.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Math Playground",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.splashlearn.com/math/probability-games",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "SplashLearn: Probability Games",
+    "description": "Engaging probability games with colorful animations and instant feedback. Covers likely/unlikely events, comparing probabilities, and simple probability calculations.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "SplashLearn",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:41:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.coolmathgames.com/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Coolmath Games: Probability Games",
+    "description": "Fun, educational games that reinforce probability concepts. Games involve making predictions, calculating odds, and testing probability through simulated experiments.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Coolmath.com",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:27:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.kidsmoneyfarm.com/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Kids Money Farm: Financial Literacy Games",
+    "description": "Gamified approach to teaching financial concepts. Students manage virtual farms while learning about earning, saving, spending, and investing.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Kids Money Farm",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:13:00",
+    "submitted_by": "Resource Team",
+    "url": "https://betterlesson.com/browse/math/statistics-probability",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "BetterLesson: Statistics and Probability Unit",
+    "description": "Complete lesson plans with student materials, assessments, and teacher guides for statistics and probability units. Includes differentiation strategies and real-world connections.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "BetterLesson",
+    "grade_level": "7, 8",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:30:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.pearsoncanadaschool.com/index.cfm?locator=PS3dLi",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Pearson Financial Literacy Workbook Series",
+    "description": "Grade-specific workbooks covering essential financial concepts including budgeting, banking, interest rates, and consumer awareness. Includes real-world scenarios and case studies relevant to Canadian students.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Pearson Canada",
+    "grade_level": "7, 8",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:55:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.ourworldindata.org/teaching",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Our World in Data: Global Data Explorer",
+    "description": "Interactive charts and maps showing global trends in health, population, and economics. Students explore real data while developing skills in reading and interpreting complex visualizations.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Our World in Data",
+    "grade_level": "8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:15:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.oise.utoronto.ca/mathresources",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "OISE: Mathematical Modeling with Data",
+    "description": "Research-based resources for teaching data analysis through mathematical modeling. Students use real datasets to build models, make predictions, and evaluate their accuracy.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "OISE - University of Toronto",
+    "grade_level": "8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:54:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cbc.ca/news/canada/data",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "CBC News: Data Journalism Stories",
+    "description": "Real news stories featuring data visualizations and statistical analysis. Students examine how data is used in journalism while developing critical media literacy skills.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CBC News",
+    "grade_level": "8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:33:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.fivethirtyeight.com/interactives/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "FiveThirtyEight: Probability in Sports and Politics",
+    "description": "Real-world examples of probability in action through sports predictions, election forecasts, and data-driven journalism. Shows students how probability impacts everyday decisions.",
+    "modality": "Online",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "FiveThirtyEight",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:45:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.moneysense.ca/save/budgeting/budget-for-teens/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "MoneySense: Budgeting for Teens",
+    "description": "Practical guide to creating a first budget, including templates, tips, and real scenarios relevant to teenage spending. Covers needs vs wants, saving goals, and tracking expenses.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "MoneySense",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:07:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.rbcfuturelaunch.com/resources",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "RBC Future Launch: Money Basics",
+    "description": "Free resources helping youth build financial confidence, including modules on banking, budgeting, and planning for post-secondary education costs.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "RBC",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.2",
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:02:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.investorseducation.ca/student-resources",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Investor Education: Stock Market Basics",
+    "description": "Introduction to investing concepts for young learners, including how the stock market works, the difference between saving and investing, and the power of compound interest over time.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Investor Education Fund",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:20:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.theglobeandmail.com/investing/education-centre/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Globe and Mail: Student Investor Challenge",
+    "description": "Virtual stock market simulation where students build and manage a portfolio using real market data. Teaches investment concepts, risk assessment, and financial decision-making.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "The Globe and Mail",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:14:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.creditcanada.com/financial-literacy-for-youth",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Credit Canada: Youth Financial Wellness",
+    "description": "Non-profit resources teaching credit basics, the dangers of debt, and responsible borrowing. Includes interactive calculators showing how interest accumulates over time.",
+    "modality": "Online, Guest Speaker",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Credit Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:19:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.wealthsimple.com/en-ca/magazine/money-101",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Wealthsimple: Money 101 for Young Canadians",
+    "description": "Plain-language guides to financial concepts including saving, investing, taxes, and building credit. Written specifically for young Canadians with relevant examples and scenarios.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Wealthsimple",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.3",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:28:18",
+    "submitted_by": "Sab",
+    "url": "https://a.co/d/2oXDXTS",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Data Literacy for Kids 2023",
+    "description": "In today's data-driven world, understanding and interpreting data is a vital skill. This book is dedicated towards spreading data literacy among young students, and inspiring them to use data to solve problems, make informed decisions, and create a positive impact.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Kathleen Yu",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 6:50:58",
+    "submitted_by": "Nisrine",
+    "url": "https://www.maneuveringthemiddle.com/teaching-probability/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Theoretical and Experimental Probability Stations Activity",
+    "description": "Probability is a great way to end the school year! There are ample opportunities for hands-on practice, experiments, and the computation is fairly simple.",
+    "modality": "Books & Print Media, Interactive",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Maneuvering the middle",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1"
+    ]
+  },
+  {
+    "timestamp": "11/4/2025 12:06:40",
+    "submitted_by": "SAb",
+    "url": "https://www.ymcagta.org/youth-programs/pfic",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "YMCA: Personal Finance: I'm In Charge",
+    "description": "A workshop designed to help students develop healthy money management habits.",
+    "modality": "Trip",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "YMCA of Greater Toronto",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2"
+    ]
+  },
+  {
+    "timestamp": "11/4/2025 12:13:22",
+    "submitted_by": "Sab",
+    "url": "https://www.geniuslearning.ca/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Financial Literacy Workshops with Genius Learning Lab",
+    "description": "A variety of ongoing workshops related to Financial Literacy, including: Saving Money; Mortgages, Loans and Credit; Preparing for the Workforce.",
+    "modality": "Trip",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Genius Learning",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:12:53",
+    "submitted_by": "Sab",
+    "url": "https://www.vaughanpl.info/programs/view/2683",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Financial Literacy Workshop",
+    "description": "Money and Budgeting for Kids workshops presented by Vaughan Public Libraries. Contact for information about school groups: https://www.vaughanpl.info/contact",
+    "modality": "Trip",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Vaughan Public Libraries",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2"
+    ]
+  },
+  {
+    "timestamp": "11/4/2025 12:15:12",
+    "submitted_by": "Sab",
+    "url": "https://moneyschoolcanada.com/index.html",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Money School Canada Workshops - Financial Literacy",
+    "description": "Money School Canada will do online or in-classroom workshops on the topic of Financial Literacy.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Money School Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:33:30",
+    "submitted_by": "Sab",
+    "url": "https://youtu.be/0iRbD5rM5qc?si=pxO0y-LHqsia8wt4",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Financial Literacy for Kids",
+    "description": "This video discusses whether something is a necessity or we just want that thing. The points are easy to follow and understand. By the end, students will receive a good foundation of these points of financial literacy.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Learn Bright",
+    "grade_level": "6, 7",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 10:59:23",
+    "submitted_by": "Sab",
+    "url": "https://www.codingal.com/coding-for-kids/blog/5-fun-and-interactive-data-science-projects-for-kids/",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "5 Fun and Interactive Data Science Experiments for Kids",
+    "description": "Data science can seem a daunting subject for kids to learn; however, this site can can help you teach data science to kids in a fun and engaging manner. ",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Codingal",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 6:59:59",
+    "submitted_by": "Nisrine",
+    "url": "https://www.teacherspayteachers.com/Product/Probability-Station-Activity-Theoretical-vs-Experimental-1122336",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Probability Station Activity - Theoretical vs. Experimental",
+    "description": "This interactive probability game has students explore and compare theoretical and experimental probabilities. ",
+    "modality": "Books & Print Media, Interactive",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "TPT",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:25:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.alloprof.qc.ca/fr/eleves/bv/mathematiques",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Alloprof: Mathamatiques - Statistiques et Probabilites",
+    "description": "Comprehensive French-language resource covering statistics and probability concepts. Includes video explanations, practice exercises, and interactive quizzes aligned with Quebec's mathematics curriculum.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Alloprof",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "QC",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:39:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.wooclap.com/templates/mathematics",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Wooclap: Real-Time Data Collection",
+    "description": "Interactive polling tool that lets teachers collect real-time data from students. Perfect for demonstrating data collection, visualization, and analysis with authentic class-generated data.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Wooclap",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:26:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.mentimeter.com/education",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Mentimeter: Live Data Collection",
+    "description": "Interactive presentation tool for real-time polling and data collection. Create instant visualizations from class data, demonstrating data collection and graphing concepts live.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Mentimeter",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:17:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.ixl.com/math/data-and-graphs",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "IXL: Data and Graphs Practice",
+    "description": "Adaptive practice platform with hundreds of data and graphing questions. Tracks student progress and adjusts difficulty automatically based on performance.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "IXL Learning",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:38:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.khanacademy.org/math/statistics-probability/displaying-describing-data",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Khan Academy: Displaying and Describing Data",
+    "description": "Comprehensive video lessons and practice exercises covering data displays, measures of center, and data analysis. Includes immediate feedback and mastery tracking.",
+    "modality": "Online, Video, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Khan Academy",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4"
+    ]
+  },
+  {
+    "timestamp": "11/7/2025 17:16:12",
+    "submitted_by": "SAb",
+    "url": "https://www.aspo.utoronto.ca/access-programs/math-fields-trips/",
+    "strand": [
+      "Data Literacy",
+      "Probability",
+      "Financial Literacy"
+    ],
+    "topic_title": "Department of Math",
+    "description": "Contact this office to enquire about guest speakers and field trips with staff from the Math Department at the University of Toronto.",
+    "modality": "Trip, Guest Speaker",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "University of Toronto",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": true,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:30:53",
+    "submitted_by": "Sab",
+    "url": "https://a.co/d/1pP7Z4I",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Drawing Data with Kids: A Screen-Free Journey through the Art of Visualization for Kids",
+    "description": "In this interactive book, children aged 7-14 will embark on a screen-free journey, discovering the magic of data through hands-on drawing exercises.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Gulrez Khan",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/7/2025 17:22:52",
+    "submitted_by": "Sab",
+    "url": "https://projecthub.arduino.cc/paskino/simple-data-statistics-temperature-7b24cf",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Code and build a device to collect temperature data",
+    "description": "Simple Data Statistics (Temperature) - Arduino collects and calculates basic statistics on the acquired analog (temperature) data: average, standard deviation, min and max.",
+    "modality": "Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Arduino",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:16:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.statscan.gc.ca/census-recensement/census-education",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Statistics Canada: Census at School",
+    "description": "Students participate in a national survey, then analyze real aggregated data from students across Canada. Teaches survey design, data collection, and comparative analysis skills.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Statistics Canada",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 9:19:54",
+    "submitted_by": "SAb",
+    "url": "www.bankofcanadamuseum.ca/you-are-the-economy/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "You are the Economy",
+    "description": "You Are the Economy is a set of six lessons and activities that explore economic and financial literacy and are designed to fit within social studies, history, geography, economics, business and career courses",
+    "modality": "Online, Interactive, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Bank of Canada Museum",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.5",
+      "D1.6",
+      "F1.4",
+      "F1.5"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:10:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.youcubed.org/tasks/data-talks/",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "YouCubed: Data Talks",
+    "description": "Visual data prompts designed to spark mathematical discussions. Each Data Talk presents a graph or visualization for students to analyze, question, and interpret collaboratively.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Stanford University - YouCubed",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:40:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cbc.ca/kidscbc2/the-feed/how-to-spot-fake-news",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "CBC Kids: How to Spot Fake News",
+    "description": "Learn critical media literacy skills including how to evaluate data claims, identify misleading statistics, and verify information sources. Perfect for cross-curricular connections between math and media studies.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "CBC Kids",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:38:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.telus.com/en/wise",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "TELUS Wise: Digital Literacy and Data",
+    "description": "Workshops on digital citizenship including how personal data is collected, used, and protected online. Connects data literacy to real-world digital contexts students encounter daily.",
+    "modality": "Guest Speaker, Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "TELUS",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.5",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 10:52:44",
+    "submitted_by": "Sab",
+    "url": "https://youtu.be/KzfWUEJjG18?si=gSapyK_Mb5KBgx3e",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Math Antics - Basic Probability",
+    "description": "Explore vocabulary and concepts related to probability in this YouTube video.",
+    "modality": "Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Math Antics",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:54:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.geogebra.org/m/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "GeoGebra Probability Simulations",
+    "description": "Interactive probability simulations allowing students to explore concepts like sample space, theoretical vs experimental probability, and the law of large numbers through virtual experiments.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "GeoGebra",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 11:50:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.random.org/dice/",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Random.org: Virtual Dice and Probability Tools",
+    "description": "Free tools for generating random numbers, rolling virtual dice, and conducting probability experiments. Students can collect data from hundreds of trials instantly.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Random.org",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:01:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.illuminations.nctm.org/probability",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "NCTM Illuminations: Probability Activities",
+    "description": "Standards-aligned probability lessons and interactive applets from the National Council of Teachers of Mathematics. Includes adjustable spinners, random number generators, and data collection tools.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "NCTM",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:23:08",
+    "submitted_by": "Sab",
+    "url": "https://www.amazon.ca/dp/B07T4VLJ6C?linkCode=gg4&tag=due01-20#",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Rethink Money for Children and Kids",
+    "description": "Rethink Money for Children and Kids is an audiobook  written by Paul O'Mahony (Author, Narrator), Chris Farrell (Author, Narrator), Progressive Publishing (Publisher). It is one of the Globe and Mail's \"12 Best Financial Literacy Books for Children\" 2024",
+    "modality": "Audio/Podcast",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Progressive Publishing",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:12:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.cba.ca/financial-literacy-for-students",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Your Money: A Guide for Students",
+    "description": "Free resource from Canadian Bankers Association covering banking basics, opening your first account, understanding credit and debit, and protecting yourself from fraud.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Canadian Bankers Association",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:42:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.bmo.com/main/personal/bank-accounts/financial-literacy/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "BMO: SmartSteps Financial Literacy",
+    "description": "Bank of Montreal's financial education program covering money basics, budgeting, and banking. Includes activities specifically designed for Canadian students.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "BMO Financial Group",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 13:53:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.servus.ca/community/financial-literacy",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Servus Credit Union: Money Smarts",
+    "description": "Alberta credit union offering youth financial literacy programs. Covers banking basics, saving strategies, and making smart money decisions as a young person.",
+    "modality": "Online, Guest Speaker",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Servus Credit Union",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "AB",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:20:55",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/9Z34oHy",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "The Know-Nonsense Guide to Financial Literacy",
+    "description": "Fuzzy on finances? This easy-to-read guide is packed with simple definitions, memorable examples, and funny illustrations to make the way we use currency throughout the world something anyone can understand.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Heidi Fiedler",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:26:19",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/74W4fBx",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Financial Literacy and Life Skills for Kids, Age 12 - 13 Workbook",
+    "description": "Empower kids ages 12-13 to learn about money and financial concepts with relatable lessons about earning, using a budget, using a bank, and more.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Evan-Moor Educational Publishers",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:17:30",
+    "submitted_by": "Sab",
+    "url": "https://www.td.com/ca/en/personal-banking/how-to/budgeting/how-to-financial-literacy-for-kids",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "TD Bank's Financial Literacy for Kids Website",
+    "description": "TD Bank provides suggested activities for parents and teachers related to financial literacy. All activities are sorted by age group.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "TD Bank",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 9:18:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.bcerac.ca/financial-literacy",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "BC Financial Literacy Resources Hub",
+    "description": "A comprehensive collection of financial literacy resources aligned with BC's curriculum, including lesson plans, student worksheets, and interactive activities about budgeting, saving, and financial decision-making.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "BC Education Resource Acquisition Consortium",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "BC",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 10:31:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.practicalmoneyskills.ca/teachers",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Practical Money Skills Canada",
+    "description": "Free financial education curriculum with lesson plans, games, and calculators. Topics include budgeting basics, saving strategies, and understanding credit???all designed for Canadian students.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Visa Canada",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/10/2025 12:48:00",
+    "submitted_by": "Resource Team",
+    "url": "https://www.desjardins.com/ca/co-opme/education-cooperation/financial-education/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Desjardins: Financial Education Resources",
+    "description": "French and English financial literacy resources covering saving, budgeting, and credit basics. Includes resources specifically designed for Quebec's curriculum.",
+    "modality": "Online, Books & Print Media",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Desjardins",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "QC",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.2",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:23:46",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/fuQ2wSK",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Get To Know: Money: A Fun, Visual Guide to How Money Works and How to Look After It ",
+    "description": "A fun, visual guide for kids about the tricky topic of money: how it works and how to look after it. This guide features fun activities and quizzes, bright pages and breaks the information into bite-size chunks so that it?s easy to digest. \n",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Kalpana Fitzpatrick",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:28:12",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/a2iNYKz",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Essential Guide to Financial Literacy for Kids",
+    "description": "Are you worried your child sees money as just something to spend? Want them to build smart money habits but can?t find resources that actually work for their age? This is the book you?ve been looking for. ",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Rachael Miller",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:39:55",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://www.bankofcanadamuseum.ca/",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Bank of Canada Museum website",
+    "description": "The Bank of Canada Museum website features a number of activities and articles appropriate for Children 10+ related to the history of money in Canada, the Gold Standard and coins.",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Bank of Canada Museum",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:43:25",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://rates.ca/resources/5-fun-financial-literacy-activities-for-kids",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "5 Fun Financial Literacy Activities For Kids",
+    "description": "5 Fun Financial Literacy Activities For Kids is hosted on the Rates.ca website and provides ideas for activities related to financial literacy for parents and teachers ",
+    "modality": "Online",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Rates.ca",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:15:09",
+    "submitted_by": "Sabrina",
+    "url": "https://www.canada.ca/en/financial-consumer-agency/services/teaching-children-money.html",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Teaching Children about Money",
+    "description": "The Government of Canada's website provides resources, tips and activities for parents and children related to saving money, setting up a bank account, getting a job, etc..",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Government of Canada",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.1",
+      "F1.3",
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:19:06",
+    "submitted_by": "Sab",
+    "url": "https://www.moneytimekids.com/for-teachers",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "MoneyTime Kids - Financial Literacy Online",
+    "description": "Free financial literacy resources for teachers, parents and children. ",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "MoneyTime",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.2"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:29:42",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/gq6AGLG",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Investing for Kids: How to Save, Invest, and Grow Money ",
+    "description": "Give curious kids the gift of essential finance skills this holiday season with an intro to investing for kids ages 8 to 12. Did you know that the sooner you understand money, the sooner you can make more of it? It's true! Investing for Kids can help make you money savvy.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Dylan Redling",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/3/2025 13:31:33",
+    "submitted_by": "Sabrina Greupner",
+    "url": "https://a.co/d/69h14hX",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "Money Skills for Kids",
+    "description": "Packed with practical advice, real-life examples, and interactive activities, it is designed to make the complex world of understanding money fun, accessible and engaging. \nPerfect for kids aged 8 to 13, this book is an educational tool - that takes the reader on the journey through the maze of money management, transforming them into savvy savers and wise spenders.",
+    "modality": "Books & Print Media",
+    "accessibility": [
+      "Some Concerns (see details)"
+    ],
+    "publisher_creator": "Ferne Bowe",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/5/2025 11:25:08",
+    "submitted_by": "Sab",
+    "url": "https://www.embark.ca/learning-centre/top-personal-finance-lessons-to-teach-children",
+    "strand": [
+      "Financial Literacy"
+    ],
+    "topic_title": "The Most Important Personal Finance Lessons to Teach Your Children",
+    "description": "Online information by Embark.ca that covers why it's important to teach children financial literacy",
+    "modality": "Online",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Embark.ca",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "F1.4"
+    ]
+  },
+  {
+    "timestamp": "11/7/2025 17:20:40",
+    "submitted_by": "Sab",
+    "url": "https://www.amazon.ca/HIDDEN-FIGURES-Taraji-P-Henson/dp/B01LTI9IYA/ref=asc_df_B01LTI9IYA?mcid=1583a2c9a4e23e25b4cb4819caa2d4e0&tag=googleshopc0c-20&linkCode=df0&hvadid=706729159881&hvpos=&hvnetw=g&hvrand=2034124837730642309&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9000795&hvtargid=pla-493399937683&psc=1&hvocijid=2034124837730642309-B01LTI9IYA-&hvexpln=0&gad_source=1",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Hidden Figures",
+    "description": "Based on the unbelievably true life stories of three of these women, known as 'human computers', we follow these women as they quickly rose the ranks of NASA alongside many of history's greatest minds specifically tasked with calculating the momentous launch of astronaut John Glenn into orbit, and guaranteeing his safe return.",
+    "modality": "Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Twentieth Century Fox",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 11:06:12",
+    "submitted_by": "Sav",
+    "url": "https://machinelearningforkids.co.uk/",
+    "strand": [
+      "Data Literacy"
+    ],
+    "topic_title": "Machine Learning for Kids",
+    "description": "The basics of machine learning as an introduction to the use of software and AI in data science.",
+    "modality": "Online, Interactive",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Machine Learning for Kids UK",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.6"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 10:56:50",
+    "submitted_by": "SAb",
+    "url": "https://www.tvokids.com/school-age/tvokids-teacher-power-hour/videos/experimental-and-theoretical-probability-junior-lesson",
+    "strand": [
+      "Probability"
+    ],
+    "topic_title": "Experimental and Theoretical Probability",
+    "description": "This video compares the theoretical and experimental probabilities of an event. Use probability to make predictions and informed decisions and express the probability of an event as a fraction. Show that more trials of an event cause the experimental probability to be closer to the theoretical probability.",
+    "modality": "Online, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "TVO Kids",
+    "grade_level": "6",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D2.1",
+      "D2.2"
+    ]
+  },
+  {
+    "timestamp": "11/6/2025 9:18:04",
+    "submitted_by": "Sab",
+    "url": "https://ssc.ca/en/education/resources-elementary-and-secondary-schools",
+    "strand": [
+      "Data Literacy",
+      "Probability"
+    ],
+    "topic_title": "Resources for Teaching and Learning about Statistics",
+    "description": "A clearinghouse site that provides a number of teaching and learning resources about statistics and data analysis.",
+    "modality": "Online, Interactive, Video",
+    "accessibility": [
+      "No Concerns"
+    ],
+    "publisher_creator": "Statistical Society of Canada",
+    "grade_level": "6, 7, 8, 9",
+    "year_published": 2025,
+    "subject": "Math",
+    "province": "ON",
+    "is_paid": false,
+    "curriculum_expectations": [
+      "D1.1",
+      "D1.2",
+      "D1.3",
+      "D1.4",
+      "D1.5",
+      "D1.6"
+    ]
+  }
+]
