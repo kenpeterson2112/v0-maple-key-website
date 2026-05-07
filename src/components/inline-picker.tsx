@@ -45,13 +45,13 @@ export default function InlinePicker({
           type="button"
           disabled={disabled}
           aria-label={ariaLabel ?? display}
-          className={`group inline-flex items-center gap-1.5 rounded-xl px-3 py-1.5 text-2xl md:text-3xl font-semibold tracking-tight transition-all duration-200 ${
+          className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-2xl md:text-3xl font-semibold tracking-tight transition-colors duration-200 ${
             disabled
               ? "cursor-not-allowed text-[#A8998E] opacity-60"
               : selected
                 ? "text-[#8B4513] hover:bg-[#FFE5CC]"
                 : "text-[#C65D3B] hover:bg-[#FFE5CC]"
-          } underline decoration-[#FF6B35]/40 decoration-2 underline-offset-[6px] hover:decoration-[#FF6B35]`}
+          } underline decoration-[#FF6B35]/35 decoration-1 underline-offset-4 hover:decoration-[#FF6B35]`}
         >
           <span>{display}</span>
           <ChevronDown
