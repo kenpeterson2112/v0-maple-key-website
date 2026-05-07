@@ -1,5 +1,5 @@
 "use client"
-import { Settings, Globe, ChevronDown, Bookmark, School, Menu, SlidersHorizontal, X } from "lucide-react"
+import { Settings, Bookmark, School, Menu, X, MapPin, ChevronDown, LogIn, SlidersHorizontal } from "lucide-react"
 import type { Filters } from "@/lib/types"
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
@@ -13,13 +13,6 @@ const EDTECH_SUBSCRIPTIONS = [
   { id: "amira", name: "Amira" },
   { id: "myon", name: "MyON" },
 ]
-
-interface SearchHeaderProps {
-  filters: Filters
-  setFilters: (filters: Filters) => void
-  onOpenMobileFilters?: () => void
-  totalActiveFilters?: number
-}
 
 const PROVINCES = [
   { code: "", name: "Canada (All)" },
@@ -44,17 +37,14 @@ const SCHOOL_DISTRICTS = [
   { code: "YRDSB", name: "York Region DSB" },
   { code: "DDSB", name: "Durham DSB" },
   { code: "PDSB", name: "Peel DSB" },
-  { code: "TVDSB", name: "TVDSB" }, // Added TVDSB to the list of school districts
+  { code: "TVDSB", name: "TVDSB" },
 ]
 
-const AVAILABLE_GRADES = ["6", "7", "8", "9"]
-const AVAILABLE_SUBJECTS = ["Math", "Science", "Language", "Social Studies"]
-
-const SUBJECT_STRANDS: Record<string, string[]> = {
-  Math: ["Probability", "Data Literacy", "Financial Literacy"],
-  Science: ["Earth and Space Systems", "Life Systems", "Matter and Energy"],
-  Language: ["Media Literacy", "Writing", "Reading", "Oral Communication"],
-  "Social Studies": ["Heritage and Identity", "People and Environments", "Power and Governance"],
+interface SearchHeaderProps {
+  filters: Filters
+  setFilters: (filters: Filters) => void
+  onOpenMobileFilters?: () => void
+  totalActiveFilters?: number
 }
 
 export default function SearchHeader({
@@ -66,59 +56,30 @@ export default function SearchHeader({
   const { bookmarkedResources } = useBookmarks()
 
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const [language, setLanguage] = useState<"EN" | "FR">("EN")
-  const [selectedGrades, setSelectedGrades] = useState<string[]>([])
   const [selectedDistrict, setSelectedDistrict] = useState<string>("")
   const [selectedSubscriptions, setSelectedSubscriptions] = useState<string[]>([])
   const [isBookmarksModalOpen, setIsBookmarksModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const gradeDropdownRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (filters.grade) {
-      setSelectedGrades(filters.grade.split(","))
-    } else {
-      setSelectedGrades([])
-    }
-  }, [filters.grade])
+  const [showSignInHint, setShowSignInHint] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (gradeDropdownRef.current && !gradeDropdownRef.current.contains(event.target as Node)) {
-        if (openDropdown === "grade") {
-          setOpenDropdown(null)
-        }
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null)
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [openDropdown])
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown)
+  }
 
   const handleProvinceChange = (code: string) => {
     setFilters({ ...filters, province: code })
-    setOpenDropdown(null)
-  }
-
-  const handleGradeToggle = (grade: string) => {
-    const newSelected = selectedGrades.includes(grade)
-      ? selectedGrades.filter((g) => g !== grade)
-      : [...selectedGrades, grade]
-
-    setSelectedGrades(newSelected)
-    setFilters({ ...filters, grade: newSelected.join(",") })
-  }
-
-  const handleFilterChange = (key: keyof Filters, value: string) => {
-    if (key === "subject") {
-      // When subject changes, clear the strand selection
-      setFilters({ ...filters, subject: value, strand: "" })
-    } else {
-      setFilters({ ...filters, [key]: value })
-    }
     setOpenDropdown(null)
   }
 
@@ -131,262 +92,82 @@ export default function SearchHeader({
     setSelectedSubscriptions((prev) => (prev.includes(subId) ? prev.filter((s) => s !== subId) : [...prev, subId]))
   }
 
-  const toggleDropdown = (dropdown: string) => {
-    setOpenDropdown(openDropdown === dropdown ? null : dropdown)
-  }
-
   const currentProvince = PROVINCES.find((p) => p.code === filters.province) || PROVINCES[0]
-  const provinceAbbr = currentProvince.code === "" ? "CA" : currentProvince.code
-
   const currentDistrict = SCHOOL_DISTRICTS.find((d) => d.code === selectedDistrict) || SCHOOL_DISTRICTS[0]
-  const districtAbbr = currentDistrict.code === "" ? "DSB" : currentDistrict.code
 
-  const GradeDropdown = () => {
-    const isOpen = openDropdown === "grade"
-    let displayValue = "All Grades"
-    if (selectedGrades.length > 0) {
-      // Sort grades in ascending order
-      const sortedGrades = [...selectedGrades].sort((a, b) => Number(a) - Number(b))
-
-      if (sortedGrades.length === 1) {
-        displayValue = `Grade ${sortedGrades[0]}`
-      } else if (sortedGrades.length === 2) {
-        displayValue = `Grades: ${sortedGrades[0]} & ${sortedGrades[1]}`
-      } else {
-        // Three or more grades
-        const lastGrade = sortedGrades[sortedGrades.length - 1]
-        const otherGrades = sortedGrades.slice(0, -1).join(", ")
-        displayValue = `Grades: ${otherGrades} & ${lastGrade}`
-      }
-    }
-
-    return (
-      <div ref={gradeDropdownRef} className="w-40 flex-shrink-0 px-3 py-2 relative">
-        <button onClick={() => toggleDropdown("grade")} className="w-full text-left">
-          <p className="text-xs font-semibold text-[#333]">Grade</p>
-          <div className="flex items-center justify-between">
-            <p
-              className={`text-sm font-medium truncate pr-1 ${selectedGrades.length > 0 ? "text-[#333]" : "text-[#999]"}`}
-            >
-              {displayValue}
-            </p>
-            <ChevronDown size={16} className="text-[#999] flex-shrink-0" />
-          </div>
-        </button>
-
-        {isOpen && (
-          <div className="absolute top-full left-0 min-w-full mt-2 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
-            <div className="max-h-60 overflow-y-auto">
-              {AVAILABLE_GRADES.map((grade) => {
-                const isSelected = selectedGrades.includes(grade)
-                return (
-                  <button
-                    key={grade}
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      handleGradeToggle(grade)
-                    }}
-                    className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 flex items-center justify-between ${
-                      isSelected ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                    }`}
-                  >
-                    <p className="text-sm text-[#2C2C2C]">Grade {grade}</p>
-                    {isSelected && <span className="text-[#8B4513] font-bold">✓</span>}
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  const SubjectDropdown = () => {
-    const isOpen = openDropdown === "subject"
-    const displayValue = filters.subject || "All Subjects"
-
-    return (
-      <div className="w-40 flex-shrink-0 px-3 py-2 relative">
-        <button onClick={() => toggleDropdown("subject")} className="w-full text-left">
-          <p className="text-xs font-semibold text-[#333]">Subject</p>
-          <div className="flex items-center justify-between">
-            <p className={`text-sm font-medium ${filters.subject ? "text-[#333]" : "text-[#999]"}`}>{displayValue}</p>
-            <ChevronDown size={16} className="text-[#999]" />
-          </div>
-        </button>
-
-        {isOpen && (
-          <div className="absolute top-full left-0 min-w-full mt-2 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
-            <div className="max-h-60 overflow-y-auto">
-              <button
-                onClick={() => handleFilterChange("subject", "")}
-                className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] ${
-                  !filters.subject ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                }`}
-              >
-                <p className="text-sm text-[#2C2C2C]">All Subjects</p>
-              </button>
-              {AVAILABLE_SUBJECTS.map((subject, idx) => {
-                const isSelected = filters.subject === subject
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => handleFilterChange("subject", subject)}
-                    className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                      isSelected ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                    }`}
-                  >
-                    <p className="text-sm text-[#2C2C2C]">{subject}</p>
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  const StrandDropdown = () => {
-    const isOpen = openDropdown === "strand"
-    const isDisabled = !filters.subject // Disabled when no subject selected
-    const availableStrands = filters.subject ? SUBJECT_STRANDS[filters.subject] || [] : []
-    const displayValue = filters.strand || "All Strands"
-
-    return (
-      <div className="w-44 flex-shrink-0 px-3 py-2 relative">
-        <button
-          onClick={() => !isDisabled && toggleDropdown("strand")}
-          className={`w-full text-left ${isDisabled ? "cursor-not-allowed" : ""}`}
-          disabled={isDisabled}
-        >
-          <p className={`text-xs font-semibold ${isDisabled ? "text-[#999]" : "text-[#333]"}`}>Strand</p>
-          <div className="flex items-center justify-between">
-            <p
-              className={`text-sm font-medium ${isDisabled ? "text-[#CCC]" : filters.strand ? "text-[#333]" : "text-[#999]"}`}
-            >
-              {isDisabled ? "Select Subject First" : displayValue}
-            </p>
-            <ChevronDown size={16} className={isDisabled ? "text-[#CCC]" : "text-[#999]"} />
-          </div>
-        </button>
-
-        {isOpen && !isDisabled && (
-          <div className="absolute top-full left-0 min-w-full mt-2 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
-            <div className="max-h-60 overflow-y-auto">
-              <button
-                onClick={() => handleFilterChange("strand", "")}
-                className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] ${
-                  !filters.strand ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                }`}
-              >
-                <p className="text-sm text-[#2C2C2C]">All Strands</p>
-              </button>
-              {availableStrands.map((strand, idx) => {
-                const isSelected = filters.strand === strand
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => handleFilterChange("strand", strand)}
-                    className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                      isSelected ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                    }`}
-                  >
-                    <p className="text-sm text-[#2C2C2C]">{strand}</p>
-                  </button>
-                )
-              })}
-            </div>
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  const handleClearFilters = () => {
-    setFilters({
-      province: "",
-      grade: "",
-      subject: "",
-      strand: "",
-      topic: "",
-      learningType: "",
-    })
-    setSelectedGrades([])
-    setSelectedDistrict("")
-    setSelectedSubscriptions([]) // Clear selected subscriptions
-    setOpenDropdown(null)
-  }
-
-  const hasActiveFilters =
-    (filters.province && filters.province !== "") ||
-    (filters.grade && filters.grade !== "") ||
-    (filters.subject && filters.subject !== "") ||
-    (filters.strand && filters.strand !== "")
+  const locationLabel =
+    selectedDistrict
+      ? `${currentDistrict.code}${filters.province ? ` · ${filters.province}` : ""}`
+      : filters.province
+        ? currentProvince.code
+        : "Canada"
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-[#FAF3E0] shadow-lg border-[#E8D5C4]">
-        <div className="max-w-[1500px] mx-auto px-4 md:px-6 py-3">
-          <div className="hidden md:grid grid-cols-[auto_1fr_auto] items-center gap-4">
+      <header className="sticky top-0 z-40 border-b border-[#E8D5C4] bg-[#FAF3E0]/90 backdrop-blur-md supports-[backdrop-filter]:bg-[#FAF3E0]/80">
+        <div ref={containerRef} className="mx-auto max-w-[1500px] px-4 md:px-6 py-2.5">
+          {/* Desktop toolbar */}
+          <div className="hidden md:flex items-center justify-between gap-4">
             <div className="flex items-center">
               <Image
                 src="/Maple_Key_Transp_Background.png"
                 alt="Maple Key Logo"
-                width={160}
-                height={56}
-                className="w-auto object-contain h-20"
+                width={140}
+                height={48}
+                className="h-12 w-auto object-contain"
                 priority
               />
             </div>
 
-            <div className="flex justify-center">
-              <div className="flex items-center bg-white border-2 border-[#E8D5C4] rounded-2xl shadow-lg max-w-[650px]">
-                <GradeDropdown />
-                <div className="w-px h-10 bg-[#E8D5C4] flex-shrink-0"></div>
-                <SubjectDropdown />
-                <div className="w-px h-10 bg-[#E8D5C4] flex-shrink-0"></div>
-                <StrandDropdown />
-
-                <div className="w-20 flex-shrink-0 px-2 py-1 ml-1">
-                  <button
-                    onClick={handleClearFilters}
-                    className={`w-full text-center text-xs font-semibold text-white bg-[#C65D3B] hover:bg-[#8B1A1A] hover:shadow-lg rounded-lg px-3 py-2 transition-opacity duration-150 ${
-                      hasActiveFilters ? "opacity-100" : "opacity-0 pointer-events-none"
-                    }`}
-                    title="Clear all filters"
-                    disabled={!hasActiveFilters}
-                  >
-                    <div className="leading-tight">Clear</div>
-                    <div className="leading-tight">Filters</div>
-                  </button>
-                </div>
-              </div>
-            </div>
-
             <div className="flex items-center gap-2">
+              {/* Location pill (district + province combined trigger) */}
               <div className="relative">
                 <button
-                  onClick={() => toggleDropdown("district")}
-                  className="flex items-center gap-2 px-3 py-1.5 min-h-[40px] min-w-[80px] bg-white rounded-xl border-2 border-[#8B4513] hover:bg-[#FFE5CC] transition-all duration-200 shadow-sm"
-                  title="Select School District"
+                  onClick={() => toggleDropdown("location")}
+                  className="flex items-center gap-2 rounded-xl border border-[#E8D5C4] bg-white px-3 py-2 text-sm font-semibold text-[#8B4513] shadow-sm transition-all hover:border-[#FF6B35]/50 hover:bg-[#FFF5ED]"
+                  title="Location & district"
                 >
-                  <School size={20} className="text-[#8B4513] flex-shrink-0" />
-                  <span className="text-sm font-bold text-[#8B4513]">{districtAbbr}</span>
+                  <MapPin size={16} className="text-[#C65D3B]" />
+                  <span>{locationLabel}</span>
+                  <ChevronDown size={14} className="text-[#A8998E]" />
                 </button>
-                {openDropdown === "district" && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
-                    <div className="max-h-72 overflow-y-auto">
-                      {SCHOOL_DISTRICTS.map((district, idx) => (
+                {openDropdown === "location" && (
+                  <div className="absolute right-0 mt-2 w-72 rounded-2xl border border-[#E8D5C4] bg-white shadow-xl z-50">
+                    <div className="border-b border-[#F0E8E0] p-3">
+                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-[#A8998E]">
+                        Province
+                      </p>
+                      <div className="max-h-44 overflow-y-auto">
+                        {PROVINCES.map((p) => (
+                          <button
+                            key={p.code || "all"}
+                            onClick={() => handleProvinceChange(p.code)}
+                            className={`block w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                              filters.province === p.code
+                                ? "bg-[#FFE5CC] text-[#8B4513] font-semibold"
+                                : "text-[#2C2C2C] hover:bg-[#FFF5ED]"
+                            }`}
+                          >
+                            {p.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="p-3">
+                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-[#A8998E]">
+                        School district
+                      </p>
+                      {SCHOOL_DISTRICTS.map((d) => (
                         <button
-                          key={idx}
-                          onClick={() => handleDistrictChange(district.code)}
-                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                            selectedDistrict === district.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
+                          key={d.code || "all"}
+                          onClick={() => handleDistrictChange(d.code)}
+                          className={`block w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                            selectedDistrict === d.code
+                              ? "bg-[#FFE5CC] text-[#8B4513] font-semibold"
+                              : "text-[#2C2C2C] hover:bg-[#FFF5ED]"
                           }`}
                         >
-                          <p className="text-sm text-[#2C2C2C]">{district.name}</p>
+                          {d.name}
                         </button>
                       ))}
                     </div>
@@ -394,45 +175,24 @@ export default function SearchHeader({
                 )}
               </div>
 
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown("province")}
-                  className="flex items-center gap-2 px-3 py-1.5 min-h-[40px] min-w-[72px] bg-white rounded-xl border-2 border-[#8B4513] hover:bg-[#FFE5CC] transition-all duration-200 shadow-sm"
-                  title="Select Province"
-                >
-                  <Globe size={20} className="text-[#8B4513] flex-shrink-0" />
-                  <span className="text-sm font-bold text-[#8B4513]">{provinceAbbr}</span>
-                </button>
-                {openDropdown === "province" && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
-                    <div className="max-h-72 overflow-y-auto">
-                      {PROVINCES.map((province, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleProvinceChange(province.code)}
-                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                            filters.province === province.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                          }`}
-                        >
-                          <p className="text-sm text-[#2C2C2C]">{province.name}</p>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-
+              {/* Subscriptions */}
               <div className="relative">
                 <button
                   onClick={() => toggleDropdown("subscriptions")}
-                  className="flex items-center gap-2 px-3 py-1.5 min-h-[40px] min-w-[72px] bg-white rounded-xl border-2 border-[#8B4513] hover:bg-[#FFE5CC] transition-all duration-200 shadow-sm"
-                  title="EdTech Subscriptions"
+                  className="flex items-center gap-2 rounded-xl border border-[#E8D5C4] bg-white px-3 py-2 text-sm font-semibold text-[#8B4513] shadow-sm transition-all hover:border-[#FF6B35]/50 hover:bg-[#FFF5ED]"
+                  title="EdTech subscriptions"
                 >
-                  <span className="text-sm font-bold text-[#8B4513]">SUBS</span>
-                  <ChevronDown size={16} className="text-[#8B4513]" />
+                  <SlidersHorizontal size={16} className="text-[#C65D3B]" />
+                  <span>Subscriptions</span>
+                  {selectedSubscriptions.length > 0 && (
+                    <span className="rounded-full bg-[#FF6B35] px-1.5 py-0.5 text-[10px] font-bold text-white">
+                      {selectedSubscriptions.length}
+                    </span>
+                  )}
+                  <ChevronDown size={14} className="text-[#A8998E]" />
                 </button>
                 {openDropdown === "subscriptions" && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-lg border border-[#E8D5C4] z-50">
+                  <div className="absolute right-0 mt-2 w-60 rounded-2xl border border-[#E8D5C4] bg-white shadow-xl z-50">
                     <div className="p-2">
                       {EDTECH_SUBSCRIPTIONS.map((sub) => {
                         const isSelected = selectedSubscriptions.includes(sub.id)
@@ -443,210 +203,163 @@ export default function SearchHeader({
                               e.stopPropagation()
                               handleSubscriptionToggle(sub.id)
                             }}
-                            className={`w-full text-left px-4 py-3 transition-colors duration-150 rounded-lg mb-1 flex items-center gap-3 ${
+                            className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left transition-colors ${
                               isSelected ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
                             }`}
                           >
                             <div
-                              className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
-                                isSelected ? "bg-[#8B4513] border-[#8B4513]" : "border-[#8B4513]"
+                              className={`flex h-5 w-5 items-center justify-center rounded border-2 ${
+                                isSelected ? "border-[#FF6B35] bg-[#FF6B35]" : "border-[#E8D5C4]"
                               }`}
                             >
-                              {isSelected && <span className="text-white text-xs font-bold">✓</span>}
+                              {isSelected && <span className="text-xs font-bold text-white">✓</span>}
                             </div>
-                            <p className="text-sm text-[#2C2C2C]">{sub.name}</p>
+                            <span className="text-sm text-[#2C2C2C]">{sub.name}</span>
                           </button>
                         )
                       })}
-                      <div className="border-t border-[#E8D5C4] mt-2 pt-2">
-                        <button
-                          onClick={() => {}}
-                          className="w-full text-center px-4 py-2 text-sm font-medium text-[#8B4513] hover:bg-[#FFF5ED] rounded-lg transition-colors duration-150"
-                        >
-                          More...
-                        </button>
-                      </div>
                     </div>
                   </div>
                 )}
               </div>
 
+              <div className="mx-1 h-6 w-px bg-[#E8D5C4]" />
+
+              {/* Bookmarks */}
               <button
                 onClick={() => setIsBookmarksModalOpen(true)}
-                className="relative p-2 min-h-[40px] min-w-[40px] hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
-                title="Saved Resources"
+                className="relative flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-[#FFE5CC]"
+                title="Saved resources"
               >
                 <Bookmark
                   size={20}
-                  className={`flex-shrink-0 ${bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}`}
+                  className={bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}
+                  fill={bookmarkedResources.length > 0 ? "currentColor" : "none"}
                 />
                 {bookmarkedResources.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B35] text-white text-xs font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -right-0.5 -top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-[#FF6B35] text-[10px] font-bold text-white">
                     {bookmarkedResources.length >= 10 ? "9+" : bookmarkedResources.length}
                   </span>
                 )}
               </button>
 
+              {/* Settings */}
               <button
                 onClick={() => setIsSettingsModalOpen(true)}
-                className="p-2 min-h-[40px] min-w-[40px] hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
+                className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-[#FFE5CC]"
                 title="Settings"
               >
-                <Settings size={20} className="text-[#8B4513] flex-shrink-0" />
+                <Settings size={20} className="text-[#8B4513]" />
               </button>
+
+              {/* Sign in */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowSignInHint((v) => !v)}
+                  className="flex items-center gap-1.5 rounded-xl bg-[#FF6B35] px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#E85A24] hover:shadow-md"
+                >
+                  <LogIn size={14} />
+                  Sign in
+                </button>
+                {showSignInHint && (
+                  <div className="absolute right-0 mt-2 w-64 rounded-2xl border border-[#E8D5C4] bg-white p-4 text-sm text-[#2C2C2C] shadow-xl z-50">
+                    <p className="font-semibold text-[#8B4513]">Save across devices</p>
+                    <p className="mt-1 text-xs text-[#666]">
+                      Sign-in is optional — your filters and bookmarks already save locally. Add an email to sync them
+                      to other browsers.
+                    </p>
+                    <p className="mt-3 text-[11px] italic text-[#A8998E]">Coming soon.</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
+          {/* Mobile toolbar */}
           <div className="flex md:hidden items-center justify-between">
             <Image
               src="/Maple_Key_Transp_Background.png"
               alt="Maple Key Logo"
               width={120}
               height={40}
-              className="w-auto object-contain h-12"
+              className="h-10 w-auto object-contain"
               priority
             />
-
-            <div className="flex items-center gap-2">
-              {/* Filters button */}
+            <div className="flex items-center gap-1.5">
               <button
                 onClick={onOpenMobileFilters}
-                className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border-2 border-[#8B4513] hover:bg-[#FFE5CC] transition-all duration-200 shadow-sm"
+                className="flex items-center gap-1.5 rounded-xl border border-[#E8D5C4] bg-white px-2.5 py-1.5 text-sm font-semibold text-[#8B4513] shadow-sm"
               >
-                <SlidersHorizontal size={18} className="text-[#8B4513]" />
-                <span className="text-sm font-semibold text-[#8B4513]">Filters</span>
+                <SlidersHorizontal size={16} />
+                Filters
                 {totalActiveFilters > 0 && (
-                  <span className="px-1.5 py-0.5 bg-[#FF6B35] text-white text-xs font-bold rounded-full min-w-[20px] text-center">
+                  <span className="rounded-full bg-[#FF6B35] px-1.5 text-[10px] font-bold text-white">
                     {totalActiveFilters >= 10 ? "9+" : totalActiveFilters}
                   </span>
                 )}
               </button>
-
-              {/* Bookmarks button */}
               <button
                 onClick={() => setIsBookmarksModalOpen(true)}
-                className="relative p-2 hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
-                title="Saved Resources"
+                className="relative flex h-9 w-9 items-center justify-center rounded-full hover:bg-[#FFE5CC]"
               >
                 <Bookmark
-                  size={20}
-                  className={`flex-shrink-0 ${bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}`}
+                  size={18}
+                  className={bookmarkedResources.length > 0 ? "text-[#FF6B35]" : "text-[#8B4513]"}
+                  fill={bookmarkedResources.length > 0 ? "currentColor" : "none"}
                 />
-                {bookmarkedResources.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B35] text-white text-xs font-bold rounded-full flex items-center justify-center">
-                    {bookmarkedResources.length >= 10 ? "9+" : bookmarkedResources.length}
-                  </span>
-                )}
               </button>
-
-              {/* Hamburger menu */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 hover:bg-[#FFE5CC] rounded-full transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-[#FFE5CC]"
               >
-                {isMobileMenuOpen ? (
-                  <X size={20} className="text-[#8B4513]" />
-                ) : (
-                  <Menu size={20} className="text-[#8B4513]" />
-                )}
+                {isMobileMenuOpen ? <X size={18} className="text-[#8B4513]" /> : <Menu size={18} className="text-[#8B4513]" />}
               </button>
             </div>
           </div>
 
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-3 p-4 bg-white rounded-xl border-2 border-[#E8D5C4] shadow-lg">
-              <div className="space-y-3">
-                {/* District */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown("district")}
-                    className="flex items-center justify-between w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
-                  >
-                    <div className="flex items-center gap-2">
-                      <School size={18} className="text-[#8B4513]" />
-                      <span className="text-sm font-medium text-[#8B4513]">School District</span>
-                    </div>
-                    <span className="text-sm text-[#555]">{currentDistrict.name}</span>
-                  </button>
-                  {openDropdown === "district" && (
-                    <div className="mt-2 bg-white rounded-xl shadow-lg border border-[#E8D5C4]">
-                      {SCHOOL_DISTRICTS.map((district, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleDistrictChange(district.code)}
-                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                            selectedDistrict === district.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                          }`}
-                        >
-                          <p className="text-sm text-[#2C2C2C]">{district.name}</p>
-                        </button>
-                      ))}
-                    </div>
-                  )}
+            <div className="md:hidden mt-3 rounded-2xl border-2 border-[#E8D5C4] bg-white p-3 shadow-lg">
+              <div className="space-y-2">
+                <p className="px-1 text-[11px] font-semibold uppercase tracking-wider text-[#A8998E]">Province</p>
+                <div className="grid grid-cols-2 gap-1.5">
+                  {PROVINCES.map((p) => (
+                    <button
+                      key={p.code || "all"}
+                      onClick={() => handleProvinceChange(p.code)}
+                      className={`rounded-lg px-2 py-1.5 text-left text-sm transition-colors ${
+                        filters.province === p.code ? "bg-[#FFE5CC] font-semibold text-[#8B4513]" : "text-[#2C2C2C] hover:bg-[#FFF5ED]"
+                      }`}
+                    >
+                      {p.name}
+                    </button>
+                  ))}
                 </div>
 
-                {/* Province */}
-                <div className="relative">
-                  <button
-                    onClick={() => toggleDropdown("province")}
-                    className="flex items-center justify-between w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
-                  >
-                    <div className="flex items-center gap-2">
-                      <Globe size={18} className="text-[#8B4513]" />
-                      <span className="text-sm font-medium text-[#8B4513]">Province</span>
-                    </div>
-                    <span className="text-sm text-[#555]">{currentProvince.name}</span>
-                  </button>
-                  {openDropdown === "province" && (
-                    <div className="mt-2 bg-white rounded-xl shadow-lg border border-[#E8D5C4] max-h-48 overflow-y-auto">
-                      {PROVINCES.map((province, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleProvinceChange(province.code)}
-                          className={`w-full text-left px-4 py-3 transition-colors duration-150 border-b border-[#F0E8E0] last:border-b-0 ${
-                            filters.province === province.code ? "bg-[#FFE5CC]" : "hover:bg-[#FFF5ED]"
-                          }`}
-                        >
-                          <p className="text-sm text-[#2C2C2C]">{province.name}</p>
-                        </button>
-                      ))}
-                    </div>
-                  )}
+                <p className="mt-3 px-1 text-[11px] font-semibold uppercase tracking-wider text-[#A8998E]">District</p>
+                <div className="grid grid-cols-1 gap-1">
+                  {SCHOOL_DISTRICTS.map((d) => (
+                    <button
+                      key={d.code || "all"}
+                      onClick={() => handleDistrictChange(d.code)}
+                      className={`flex items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm transition-colors ${
+                        selectedDistrict === d.code ? "bg-[#FFE5CC] font-semibold text-[#8B4513]" : "text-[#2C2C2C] hover:bg-[#FFF5ED]"
+                      }`}
+                    >
+                      <School size={14} className="text-[#A8998E]" />
+                      {d.name}
+                    </button>
+                  ))}
                 </div>
 
-                {/* Subscriptions */}
-                <div>
-                  <p className="text-sm font-medium text-[#8B4513] mb-2">EdTech Subscriptions</p>
-                  <div className="flex flex-wrap gap-2">
-                    {EDTECH_SUBSCRIPTIONS.map((sub) => {
-                      const isSelected = selectedSubscriptions.includes(sub.id)
-                      return (
-                        <button
-                          key={sub.id}
-                          onClick={() => handleSubscriptionToggle(sub.id)}
-                          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                            isSelected
-                              ? "bg-[#8B4513] text-white"
-                              : "bg-white border border-[#E8D5C4] text-[#555] hover:border-[#8B4513]"
-                          }`}
-                        >
-                          {sub.name}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-
-                {/* Settings */}
                 <button
                   onClick={() => {
                     setIsSettingsModalOpen(true)
                     setIsMobileMenuOpen(false)
                   }}
-                  className="flex items-center gap-2 w-full px-3 py-2 bg-[#FFF5ED] rounded-lg"
+                  className="mt-3 flex w-full items-center gap-2 rounded-lg bg-[#FFF5ED] px-3 py-2 text-sm font-semibold text-[#8B4513]"
                 >
-                  <Settings size={18} className="text-[#8B4513]" />
-                  <span className="text-sm font-medium text-[#8B4513]">Settings</span>
+                  <Settings size={16} />
+                  Settings
                 </button>
               </div>
             </div>
