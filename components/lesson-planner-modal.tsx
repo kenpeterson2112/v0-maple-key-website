@@ -24,6 +24,7 @@ import {
   MessageSquareText,
 } from "lucide-react"
 import type { Resource } from "@/lib/types"
+import { withBasePath } from "@/lib/base-path"
 
 interface LessonPlannerModalProps {
   isOpen: boolean
@@ -343,7 +344,7 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
 </head>
 <body>
   <div class="header">
-    <img src="/Maple_Key_Transp_Background.png" alt="Maple Key" class="logo" onerror="this.style.display='none'">
+    <img src="${withBasePath("/Maple_Key_Transp_Background.png")}" alt="Maple Key" class="logo" onerror="this.style.display='none'">
     <div class="header-right">
       <div>Generated: ${currentDate}</div>
       <div>Maple Key Lesson Planner</div>

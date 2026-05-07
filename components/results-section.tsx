@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Search, X, Plus, Compass } from "lucide-react"
 import ResourceCard from "./resource-card"
 import type { Filters } from "@/lib/types"
+import { withBasePath } from "@/lib/base-path"
 
 interface Resource {
   province: string
@@ -39,7 +40,7 @@ export default function ResultsSection({ filters, sidebarFilters, onCountChange 
   const [isSearching, setIsSearching] = useState(false)
   const [showSubmitDialog, setShowSubmitDialog] = useState(false)
 
-  const { data, error, isLoading } = useSWR<Resource[]>("/resources.json", fetcher, {
+  const { data, error, isLoading } = useSWR<Resource[]>(withBasePath("/resources.json"), fetcher, {
     refreshInterval: 3600000,
     revalidateOnFocus: false,
   })

@@ -1,30 +1,38 @@
 # Maple Key website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A Canadian K-12 educational resource discovery platform for teachers. Static
+Next.js site, hosted on GitHub Pages.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/thekenpeterson-3413s-projects/v0-maple-key-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/h04hR49vS2k)
+## Live site
 
-## Overview
+**https://kenpeterson2112.github.io/v0-maple-key-website/**
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+Deployed automatically by `.github/workflows/deploy.yml` on every push to
+`main`.
 
-## Deployment
+## Develop locally
 
-Your project is live at:
+```bash
+pnpm install
+pnpm dev
+```
 
-**[https://vercel.com/thekenpeterson-3413s-projects/v0-maple-key-website](https://vercel.com/thekenpeterson-3413s-projects/v0-maple-key-website)**
+Open http://localhost:3000.
 
-## Build your app
+## Build
 
-Continue building your app on:
+```bash
+pnpm build
+```
 
-**[https://v0.app/chat/h04hR49vS2k](https://v0.app/chat/h04hR49vS2k)**
+Produces a static export in `out/`. For production builds intended for
+GitHub Pages, set `NEXT_PUBLIC_BASE_PATH=/v0-maple-key-website` so absolute
+asset URLs and `fetch("/resources.json")` resolve correctly under the repo
+sub-path. The CI workflow already does this.
 
-## How It Works
+## Notes
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- The app is fully client-side: it loads `public/resources.json` via SWR and
+  filters in the browser. No server runtime required.
+- Asset paths use the `withBasePath()` helper in `lib/base-path.ts` so the
+  same code works under a sub-path on GitHub Pages and at the root in dev.
