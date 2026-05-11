@@ -62,12 +62,12 @@ export default function CompactResourceCard({ resource }) {
 
   const getProvinceColor = (province: string) => {
     const colorMap = {
-      ON: "from-[#1E40AF] to-[#1E3A8A]", // Ontario: blue
-      AB: "from-[#DC2626] to-[#991B1B]", // Alberta: red
+      ON: "from-[#DC2626] to-[#991B1B]", // Ontario: red
+      AB: "from-[#1E40AF] to-[#1E3A8A]", // Alberta: blue
       BC: "from-[#059669] to-[#047857]", // BC: green
-      QC: "from-[#7C3AED] to-[#6D28D9]", // Quebec: violet
+      QC: "from-[#0891B2] to-[#0E7490]", // Quebec: cyan
       MB: "from-[#D97706] to-[#B45309]", // Manitoba: amber
-      NB: "from-[#0891B2] to-[#0E7490]", // NB: cyan
+      NB: "from-[#7C3AED] to-[#6D28D9]", // NB: violet
       NL: "from-[#EC4899] to-[#DB2777]", // NL: pink
       NS: "from-[#0F766E] to-[#115E59]", // NS: teal
       PE: "from-[#BE185D] to-[#9F1239]", // PE: rose

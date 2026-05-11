@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Brand display face — drop AlteixsansRegulardemo-E4j1n.otf into /public/fonts/ */
+@font-face {
+  font-family: "Alteix Sans";
+  src: url("/fonts/AlteixsansRegulardemo-E4j1n.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -49,6 +58,7 @@
 
 @theme inline {
   --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-display: "Alteix Sans", "Geist", system-ui, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
