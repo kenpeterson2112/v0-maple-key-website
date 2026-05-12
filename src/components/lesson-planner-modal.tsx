@@ -25,6 +25,9 @@ import {
 } from "lucide-react"
 import type { Resource } from "@/lib/types"
 import { withBasePath } from "@/lib/base-path"
+import { logLesson, getLatestLesson } from "@/lib/lesson-metadata"
+import type { LessonMetadata } from "@/lib/lesson-metadata"
+import AssessmentModal from "@/components/assessment-modal"
 
 interface LessonPlannerModalProps {
   isOpen: boolean
@@ -42,41 +45,18 @@ export default function LessonPlannerModal({ isOpen, onClose, onBack, bookmarked
   const [lessonGenerated, setLessonGenerated] = useState(false)
 
   const [editingSection, setEditingSection] = useState<string | null>(null)
-  const [mindsOnContent, setMindsOnContent] = useState(
-    "Begin with a 2-minute clip from Hidden Figures showing Katherine Johnson calculating orbital trajectories. Pause and ask: 'What kinds of data do you think NASA scientists need to collect to send someone to space?' Record student responses. Introduce today's big question: 'How do scientists use data to explore and understand our solar system?'",
-  )
-  const [mindsOnDifferentiation, setMindsOnDifferentiation] = useState(
-    "For students needing support (7): Provide sentence starters like 'Scientists might need to know...' For students ready for extension (8): Ask them to consider what could go wrong if the data were inaccurate.",
-  )
-  const [actionContent, setActionContent] = useState(
-    `Station Rotation (12 min each, 3 stations):
-
-Station 1 - Climate Data Analysis: Using NASA Climate Data Visualizations, pairs analyze temperature trend graphs from 1880-present. Students identify patterns, make predictions, and discuss what the data reveals.
-
-Station 2 - Solar System Statistics: Using NASA Space Place, groups collect data about planets (distance from sun, size, number of moons) and create comparison graphs. Teams choose the best graph type to represent their findings.
-
-Station 3 - Data Skills Practice: Using Khan Academy: Displaying and Describing Data, students work through interactive exercises on reading and interpreting graphs, then apply skills to analyze a space-related dataset.`,
-  )
-  const [actionDifferentiation, setActionDifferentiation] = useState(
-    "Groups pre-assigned by readiness. Support groups (7 students) receive graphic organizers with graph-reading scaffolds. Extension groups (8 students) analyze potential sources of bias in historical climate data collection.",
-  )
-  const [consolidationContent, setConsolidationContent] = useState(
-    "Gallery Walk: Each station group posts one key finding. Students circulate with sticky notes adding questions or connections. Whole-class discussion: 'How did data help us understand something about space today?' Exit ticket: 'One way scientists use data to explore space is...' and 'One question I still have about data or probability is...'",
-  )
-  const [consolidationAssessment, setConsolidationAssessment] = useState(
-    "Review exit tickets to identify students still struggling with graph interpretation (D1.1) or probability concepts (D2.1, D2.2). Plan targeted small-group instruction for tomorrow's warm-up.",
-  )
-  const [materialsContent, setMaterialsContent] = useState(
-    `Hidden Figures film clip (2 min) - queued to Katherine Johnson calculation scene
-Devices with access to Khan Academy, NASA Climate Data Visualizations, NASA Space Place
-Graph paper and rulers
-Graphic organizers for support groups (7 copies)
-Chart paper and markers for gallery walk
-Sticky notes (3 per student)
-Exit ticket slips
-
-Student Groupings: Pre-assigned based on readiness data. Extension students can serve as peer supports for intervention students.`,
-  )
+  const [lessonTitle, setLessonTitle] = useState("")
+  const [coveredCodes, setCoveredCodes] = useState<string[]>([])
+  const [mindsOnContent, setMindsOnContent] = useState("")
+  const [mindsOnDifferentiation, setMindsOnDifferentiation] = useState("")
+  const [actionContent, setActionContent] = useState("")
+  const [actionDifferentiation, setActionDifferentiation] = useState("")
+  const [consolidationContent, setConsolidationContent] = useState("")
+  const [consolidationAssessment, setConsolidationAssessment] = useState("")
+  const [materialsContent, setMaterialsContent] = useState("")
+  const [generateError, setGenerateError] = useState<string | null>(null)
+  const [showAssessment, setShowAssessment] = useState(false)
+  const [latestLesson, setLatestLesson] = useState<LessonMetadata | null>(null)
 
   const [showFeedbackDialog, setShowFeedbackDialog] = useState(false)
 
@@ -85,21 +65,63 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
   const uniqueStrands = new Set(bookmarkedResources.flatMap((r) => r.strand || []))
   const showWarning = bookmarkedResources.length > 5 || uniqueStrands.size > 2
 
-  const handleGenerate = () => {
+  const callGenerateLesson = async () => {
     setIsGenerating(true)
-    setTimeout(() => {
-      setIsGenerating(false)
+    setGenerateError(null)
+    try {
+      const res = await fetch("/api/generate-lesson", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          resources: bookmarkedResources.map((r) => ({
+            title: r.title,
+            description: r.description,
+            curriculum_expectations: r.curriculum_expectations ?? [],
+            grade: r.grade,
+            subject: r.subject,
+            publisher: r.publisher,
+          })),
+          lessonLength,
+          lessonTemplate,
+          teacherNotes,
+          includeAssessmentData,
+        }),
+      })
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}))
+        throw new Error(body.error ?? `Server error ${res.status}`)
+      }
+      const data = await res.json()
+      setLessonTitle(data.title ?? "")
+      setCoveredCodes(data.curriculumCodesCovered ?? [])
+      setMindsOnContent(data.mindsOnContent ?? "")
+      setMindsOnDifferentiation(data.mindsOnDifferentiation ?? "")
+      setActionContent(data.actionContent ?? "")
+      setActionDifferentiation(data.actionDifferentiation ?? "")
+      setConsolidationContent(data.consolidationContent ?? "")
+      setConsolidationAssessment(data.consolidationAssessment ?? "")
+      setMaterialsContent(data.materialsContent ?? "")
+      const logged = logLesson({
+        title: data.title ?? "",
+        grade: bookmarkedResources[0]?.grade ?? "",
+        subject: bookmarkedResources[0]?.subject ?? "",
+        curriculumCodesCovered: data.curriculumCodesCovered ?? [],
+        resourceIds: bookmarkedResources.map((r) => r.id),
+      })
+      setLatestLesson(logged)
       setLessonGenerated(true)
-    }, 2000)
+    } catch (err) {
+      setGenerateError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
+    } finally {
+      setIsGenerating(false)
+    }
   }
+
+  const handleGenerate = () => callGenerateLesson()
 
   const handleRegenerate = () => {
     setLessonGenerated(false)
-    setIsGenerating(true)
-    setTimeout(() => {
-      setIsGenerating(false)
-      setLessonGenerated(true)
-    }, 2000)
+    callGenerateLesson()
   }
 
   const lessonMinutes = Number.parseInt(lessonLength) || 60
@@ -126,13 +148,13 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
         : "Grade 6 Math"
 
     const curriculumCodes =
-      bookmarkedResources.length > 0
-        ? bookmarkedResources
+      coveredCodes.length > 0
+        ? coveredCodes.join(", ")
+        : bookmarkedResources
             .flatMap((r) => r.curriculum_expectations || [])
             .filter((v, i, a) => a.indexOf(v) === i)
             .slice(0, 3)
-            .join(", ")
-        : "D1.1, D2.1, D2.2"
+            .join(", ") || "N/A"
 
     const resourcesList = bookmarkedResources.map((r) => `<li>${r.topic_title} - ${r.publisher_creator}</li>`).join("")
 
@@ -142,7 +164,7 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson Plan - Data Detectives: Exploring Space Through Numbers</title>
+  <title>Lesson Plan - ${lessonTitle || "Maple Key Lesson"}</title>
   <style>
     * {
       margin: 0;
@@ -527,14 +549,18 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
                   <div className="flex items-start justify-between">
                     <div>
                       <h3 className="text-xl font-bold text-[#2C2C2C]">
-                        Data Detectives: Exploring Space Through Numbers
+                        {lessonTitle}
                       </h3>
                       <p className="text-sm text-[#666] mt-1">
-                        Grade 6 • {lessonLength} • {lessonTemplate.split(" (")[0]}
+                        {bookmarkedResources[0]?.grade ? `Grade ${bookmarkedResources[0].grade}` : ""}
+                        {bookmarkedResources[0]?.grade && " • "}
+                        {lessonLength} • {lessonTemplate.split(" (")[0]}
                       </p>
-                      <p className="text-xs text-[#888] mt-1">
-                        Curriculum: D1.1, D2.1, D2.2 • Cross-curricular: Science - Earth and Space Systems
-                      </p>
+                      {coveredCodes.length > 0 && (
+                        <p className="text-xs text-[#888] mt-1">
+                          Curriculum: {coveredCodes.join(", ")}
+                        </p>
+                      )}
                     </div>
                     <div className="flex gap-2">
                       <button
@@ -855,6 +881,26 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
                   </button>
                 </div>
 
+                {/* Assessment CTA */}
+                {latestLesson && (
+                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-center justify-between gap-4">
+                    <div>
+                      <p className="font-semibold text-amber-900">Check student understanding</p>
+                      {coveredCodes.length > 0 && (
+                        <p className="text-sm text-amber-700 mt-0.5">
+                          Quick formative check on {coveredCodes.join(", ")}
+                        </p>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => setShowAssessment(true)}
+                      className="flex-shrink-0 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-lg transition-colors"
+                    >
+                      Start Assessment
+                    </button>
+                  </div>
+                )}
+
                 {/* Spacer for bottom */}
                 <div className="h-6" />
               </>
@@ -1060,7 +1106,13 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
 
         {!lessonGenerated && (
           <div className="sticky bottom-0 border-t-2 border-[#E8D5C4] bg-white px-6 py-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto space-y-3">
+              {generateError && (
+                <div className="flex items-start gap-2 rounded-lg bg-red-50 border border-red-200 px-4 py-3">
+                  <AlertTriangle size={16} className="text-red-500 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-red-700">{generateError}</p>
+                </div>
+              )}
               <button
                 onClick={handleGenerate}
                 disabled={isGenerating}
@@ -1082,6 +1134,14 @@ Student Groupings: Pre-assigned based on readiness data. Extension students can 
           </div>
         )}
       </div>
+
+      {showAssessment && latestLesson && (
+        <AssessmentModal
+          isOpen={showAssessment}
+          onClose={() => setShowAssessment(false)}
+          lesson={latestLesson}
+        />
+      )}
 
       {showFeedbackDialog && (
         <div className="fixed inset-0 z-[300] flex items-center justify-center">
