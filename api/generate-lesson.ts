@@ -85,10 +85,16 @@ Return a JSON object with exactly these fields (all values are plain text string
 
   try {
     const message = await client.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 2048,
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 1200,
       messages: [{ role: "user", content: userPrompt }],
-      system: systemPrompt,
+      system: [
+        {
+          type: "text",
+          text: systemPrompt,
+          cache_control: { type: "ephemeral" },
+        },
+      ],
     })
 
     const rawText = message.content[0].type === "text" ? message.content[0].text : ""
