@@ -103,6 +103,9 @@ Return a JSON object with exactly these fields (all values are plain text string
     return res.status(200).json(lesson)
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unexpected error"
+    if (message.toLowerCase().includes("credit balance") || message.toLowerCase().includes("billing")) {
+      return res.status(402).json({ error: "API_BALANCE_LOW", message })
+    }
     return res.status(500).json({ error: message })
   }
 }
