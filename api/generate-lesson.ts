@@ -30,9 +30,8 @@ interface LessonPlanResponse {
   materialsContent: string
 }
 
-const client = new Anthropic()
-
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  const client = new Anthropic()
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" })
   }
