@@ -89,6 +89,9 @@ export default function LessonPlannerModal({ isOpen, onClose, onBack, bookmarked
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
+        if (res.status === 402 || body.error === "API_BALANCE_LOW") {
+          throw new Error("API_BALANCE_LOW")
+        }
         throw new Error(body.error ?? `Server error ${res.status}`)
       }
       const data = await res.json()
@@ -1108,9 +1111,13 @@ export default function LessonPlannerModal({ isOpen, onClose, onBack, bookmarked
           <div className="sticky bottom-0 border-t-2 border-[#E8D5C4] bg-white px-6 py-4">
             <div className="max-w-3xl mx-auto space-y-3">
               {generateError && (
-                <div className="flex items-start gap-2 rounded-lg bg-red-50 border border-red-200 px-4 py-3">
-                  <AlertTriangle size={16} className="text-red-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-red-700">{generateError}</p>
+                <div className={`flex items-start gap-2 rounded-lg px-4 py-3 border ${generateError === "API_BALANCE_LOW" ? "bg-amber-50 border-amber-200" : "bg-red-50 border-red-200"}`}>
+                  <AlertTriangle size={16} className={`flex-shrink-0 mt-0.5 ${generateError === "API_BALANCE_LOW" ? "text-amber-500" : "text-red-500"}`} />
+                  <p className={`text-sm ${generateError === "API_BALANCE_LOW" ? "text-amber-800" : "text-red-700"}`}>
+                    {generateError === "API_BALANCE_LOW"
+                      ? "The AI service is temporarily unavailable while we top up our API credits. Please try again shortly — we're working on it!"
+                      : generateError}
+                  </p>
                 </div>
               )}
               <button
